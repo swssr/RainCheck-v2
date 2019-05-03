@@ -5,7 +5,7 @@ namespace RainCheckUI.Model
 {
     public class ModelContext : DbContext
     {
-        public ModelContext() : base("DefaultConnection") { }
+        public ModelContext() : base("name=DefaultConnection") { }
 
         public DbSet<User> Users { get; set; }
         public DbSet<Forecast> Forecasts { get; set; }

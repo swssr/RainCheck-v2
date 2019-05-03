@@ -13,7 +13,7 @@ namespace RainCheckUI.Model
         public string Username { get; set; }
         [Required, MinLength(8, ErrorMessage = "Password should have at least 8 characters")]
         public string Password { get; set; }
-        private bool isAdmin { get; set; }
+        public bool isAdmin { get; set; }
         public User()
         {
             isAdmin = false;
@@ -21,7 +21,7 @@ namespace RainCheckUI.Model
 
         public bool hasElevatedPrivilages() => isAdmin;
 
-        public int CityId { get; set; }
+        public int? CityId { get; set; }
         public virtual City HomeTown { get; set; }
     }
 }

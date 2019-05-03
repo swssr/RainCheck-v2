@@ -11,7 +11,7 @@ namespace RainCheckUI.Model
     {
         public int CityId { get; set; }
         [Required, MinLength(2, ErrorMessage = "City name should at least have 2 chars")]
-        public string Name { get; set; }
+        public string CityName { get; set; }
 
         public int ProvinceId { get; set; }
         public virtual Province Province { get; set; }
