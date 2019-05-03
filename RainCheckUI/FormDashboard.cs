@@ -1,6 +1,8 @@
 ﻿using MetroFramework;
 using RainCheckUI.Model;
+using RainCheckUI.Services;
 using System;
+using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Windows.Forms;
@@ -8,9 +10,13 @@ namespace RainCheckUI
 {
     public partial class FormDashboard : MetroFramework.Forms.MetroForm
     {
+        ModelContext _context = new ModelContext();
         public FormDashboard()
         {
             InitializeComponent();
+
+            bindStuff();
+
         }
         private void FormDashboard_Load(object sender, EventArgs e)
         {
@@ -20,13 +26,14 @@ namespace RainCheckUI
                 userBindingSource.DataSource = db.Users.ToList();
                 cityBindingSource.DataSource = db.Cities.ToList();
                 forecastBindingSource.DataSource = db.Forecasts.ToList();
+
                 panelAddForecast.Visible = true;
                 panelUpdateForecast.Visible = false;
                 panelRemoveForecast.Visible = false;
 
-                cmbHomeTowns.DataSource = db.Cities.ToArray();
-                cmbHomeTowns.DisplayMember = "CityName";
-                cmbHomeTowns.ValueMember = "CityId";
+                cmdAddForecastCity.DataSource = db.Cities.ToArray();
+                cmdAddForecastCity.DisplayMember = "CityName";
+
             }
 
         }
@@ -35,6 +42,7 @@ namespace RainCheckUI
             panelAddForecast.Visible = true;
             panelUpdateForecast.Visible = false;
             panelRemoveForecast.Visible = false;
+            dashboardTabControl.TabIndex = 5;
         }
 
         private void tileUpdateForecast_Click(object sender, EventArgs e)
@@ -58,6 +66,11 @@ namespace RainCheckUI
 
         private void btnAddUser_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void btnDeleteUser_Click(object sender, EventArgs e)
+        {
             using (var db = new ModelContext())
             {
 
@@ -66,11 +79,13 @@ namespace RainCheckUI
                     User user = userBindingSource.Current as User;
                     if (user != null)
                     {
-                        if (db.Entry<User>(user).State == EntityState.Detached)
-                        {
-                            db.Set<User>().Attach(user);
-                        }
-                        db.Entry<User>(user).State = EntityState.Deleted;
+                        //if (db.Entry<User>(user).State == EntityState.Detached)
+                        //{
+                        //    db.Set<User>().Attach(user);
+                        //}
+                        //db.Entry<User>(user).State = EntityState.Deleted;
+                        User userToDelete = db.Users.Find(user.Username);
+                        db.Users.Remove(userToDelete);
                         db.SaveChanges();
 
                         MetroMessageBox.Show(this, "User deleted successfully");
@@ -84,5 +99,19 @@ namespace RainCheckUI
         {
             FormDashboard_Load(sender, e);
         }
+        
+        public void bindStuff()
+        {
+            //Auto-complete services
+            AutoCompleteService acService = new AutoCompleteService();
+            acService.ProvinceAutoComplete(txtSearchProvince);
+            acService.CityAutoComplete(txtSearchHomeTown);
+
+
+            userBindingSource.DataSource = _context.Users.ToList();
+            cityBindingSource.DataSource = _context.Cities.ToList();
+            forecastBindingSource.DataSource = _context.Forecasts.ToList();
+        }
+
     }
 }
