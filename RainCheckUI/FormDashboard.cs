@@ -16,6 +16,7 @@ namespace RainCheckUI
             InitializeComponent();
 
             bindStuff();
+            checkDbIndexing();
 
         }
         private void FormDashboard_Load(object sender, EventArgs e)
@@ -62,28 +63,28 @@ namespace RainCheckUI
         private void gridAllUsers_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             User user = userBindingSource.Current as User;
+            //Func<bool> isIndexed = () => _context.Users.Find(user.Username) != null;
+            if (_context.Users.Find(user.Username) != null)
+            {
+                btnAddUser.Enabled = false;
+            }
         }
 
         private void btnAddUser_Click(object sender, EventArgs e)
         {
-            
+            MetroMessageBox.Show(this, "Add clicked");
         }
 
         private void btnDeleteUser_Click(object sender, EventArgs e)
         {
             using (var db = new ModelContext())
             {
-
-                if (MetroMessageBox.Show(this, "Confirm to delete this user", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
-                {
                     User user = userBindingSource.Current as User;
+
+                if (MetroMessageBox.Show(this, $"Confirm to delete this user: {user.Username}", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                {
                     if (user != null)
                     {
-                        //if (db.Entry<User>(user).State == EntityState.Detached)
-                        //{
-                        //    db.Set<User>().Attach(user);
-                        //}
-                        //db.Entry<User>(user).State = EntityState.Deleted;
                         User userToDelete = db.Users.Find(user.Username);
                         db.Users.Remove(userToDelete);
                         db.SaveChanges();
@@ -98,6 +99,20 @@ namespace RainCheckUI
         private void btnRefresh_Click(object sender, EventArgs e)
         {
             FormDashboard_Load(sender, e);
+        }
+        private void checkDbIndexing()
+        {
+            User user = userBindingSource.Current as User;
+            List<User> usersInDB = _context.Users.ToList();
+            //Func<bool> isIndexed = () => _context.Users.Find(user.Username) != null;
+            if (usersInDB.IndexOf(user) != -1)
+            {
+                btnAddUser.Enabled = false;
+            }
+            else
+            {
+                btnAddUser.Enabled = true;
+            }
         }
         
         public void bindStuff()
