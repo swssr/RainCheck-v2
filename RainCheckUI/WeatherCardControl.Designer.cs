@@ -28,81 +28,75 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lbCityName = new System.Windows.Forms.Label();
+            this.picIcon = new System.Windows.Forms.PictureBox();
             this.lbDate = new System.Windows.Forms.Label();
-            this.lbMaxTemp = new System.Windows.Forms.Label();
             this.lbMinTemp = new System.Windows.Forms.Label();
-            this.pnlIcon = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel1.SuspendLayout();
+            this.lbMaxTemp = new System.Windows.Forms.Label();
+            this.lbCityName = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.picIcon)).BeginInit();
             this.SuspendLayout();
             // 
-            // lbCityName
+            // picIcon
             // 
-            this.lbCityName.AutoSize = true;
-            this.lbCityName.Location = new System.Drawing.Point(28, 11);
-            this.lbCityName.Name = "lbCityName";
-            this.lbCityName.Size = new System.Drawing.Size(42, 13);
-            this.lbCityName.TabIndex = 0;
-            this.lbCityName.Text = "Durban";
+            this.picIcon.BackColor = System.Drawing.Color.Transparent;
+            this.picIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.picIcon.Location = new System.Drawing.Point(75, 35);
+            this.picIcon.Name = "picIcon";
+            this.picIcon.Size = new System.Drawing.Size(83, 77);
+            this.picIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picIcon.TabIndex = 9;
+            this.picIcon.TabStop = false;
             // 
             // lbDate
             // 
             this.lbDate.AutoSize = true;
-            this.lbDate.Location = new System.Drawing.Point(17, 128);
+            this.lbDate.Location = new System.Drawing.Point(16, 130);
             this.lbDate.Name = "lbDate";
             this.lbDate.Size = new System.Drawing.Size(53, 13);
-            this.lbDate.TabIndex = 0;
+            this.lbDate.TabIndex = 5;
             this.lbDate.Text = "12/12/12";
-            // 
-            // lbMaxTemp
-            // 
-            this.lbMaxTemp.Font = new System.Drawing.Font("Microsoft Sans Serif", 46F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.lbMaxTemp.Location = new System.Drawing.Point(11, 29);
-            this.lbMaxTemp.Name = "lbMaxTemp";
-            this.lbMaxTemp.Size = new System.Drawing.Size(89, 84);
-            this.lbMaxTemp.TabIndex = 1;
-            this.lbMaxTemp.Text = "34";
             // 
             // lbMinTemp
             // 
             this.lbMinTemp.AutoSize = true;
             this.lbMinTemp.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.lbMinTemp.Location = new System.Drawing.Point(16, 81);
+            this.lbMinTemp.Location = new System.Drawing.Point(15, 87);
             this.lbMinTemp.Name = "lbMinTemp";
             this.lbMinTemp.Size = new System.Drawing.Size(30, 22);
-            this.lbMinTemp.TabIndex = 0;
+            this.lbMinTemp.TabIndex = 6;
             this.lbMinTemp.Text = "10";
             // 
-            // pnlIcon
+            // lbMaxTemp
             // 
-            this.pnlIcon.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.pnlIcon.Location = new System.Drawing.Point(79, 29);
-            this.pnlIcon.Name = "pnlIcon";
-            this.pnlIcon.Size = new System.Drawing.Size(78, 84);
-            this.pnlIcon.TabIndex = 2;
+            this.lbMaxTemp.Font = new System.Drawing.Font("Microsoft Sans Serif", 46F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.lbMaxTemp.Location = new System.Drawing.Point(6, 35);
+            this.lbMaxTemp.Name = "lbMaxTemp";
+            this.lbMaxTemp.Size = new System.Drawing.Size(78, 52);
+            this.lbMaxTemp.TabIndex = 8;
+            this.lbMaxTemp.Text = "34";
             // 
-            // panel1
+            // lbCityName
             // 
-            this.panel1.Controls.Add(this.lbDate);
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(171, 161);
-            this.panel1.TabIndex = 3;
+            this.lbCityName.AutoSize = true;
+            this.lbCityName.Location = new System.Drawing.Point(17, 17);
+            this.lbCityName.Name = "lbCityName";
+            this.lbCityName.Size = new System.Drawing.Size(42, 13);
+            this.lbCityName.TabIndex = 7;
+            this.lbCityName.Text = "Durban";
             // 
             // WeatherCardControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.pnlIcon);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.Controls.Add(this.picIcon);
+            this.Controls.Add(this.lbDate);
             this.Controls.Add(this.lbMinTemp);
             this.Controls.Add(this.lbMaxTemp);
             this.Controls.Add(this.lbCityName);
-            this.Controls.Add(this.panel1);
             this.Name = "WeatherCardControl";
             this.Size = new System.Drawing.Size(171, 164);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picIcon)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -110,11 +104,10 @@
 
         #endregion
 
-        private System.Windows.Forms.Label lbCityName;
+        private System.Windows.Forms.PictureBox picIcon;
         private System.Windows.Forms.Label lbDate;
-        private System.Windows.Forms.Label lbMaxTemp;
         private System.Windows.Forms.Label lbMinTemp;
-        private System.Windows.Forms.Panel pnlIcon;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label lbMaxTemp;
+        private System.Windows.Forms.Label lbCityName;
     }
 }

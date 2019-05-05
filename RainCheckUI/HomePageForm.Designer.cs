@@ -43,9 +43,9 @@
             this.pnlCardList.HorizontalScrollbarBarColor = true;
             this.pnlCardList.HorizontalScrollbarHighlightOnWheel = false;
             this.pnlCardList.HorizontalScrollbarSize = 10;
-            this.pnlCardList.Location = new System.Drawing.Point(24, 64);
+            this.pnlCardList.Location = new System.Drawing.Point(24, 63);
             this.pnlCardList.Name = "pnlCardList";
-            this.pnlCardList.Size = new System.Drawing.Size(736, 472);
+            this.pnlCardList.Size = new System.Drawing.Size(719, 473);
             this.pnlCardList.TabIndex = 0;
             this.pnlCardList.VerticalScrollbarBarColor = true;
             this.pnlCardList.VerticalScrollbarHighlightOnWheel = false;
@@ -57,9 +57,9 @@
             this.pnlWatchlist.HorizontalScrollbarBarColor = true;
             this.pnlWatchlist.HorizontalScrollbarHighlightOnWheel = false;
             this.pnlWatchlist.HorizontalScrollbarSize = 10;
-            this.pnlWatchlist.Location = new System.Drawing.Point(766, 64);
+            this.pnlWatchlist.Location = new System.Drawing.Point(747, 64);
             this.pnlWatchlist.Name = "pnlWatchlist";
-            this.pnlWatchlist.Size = new System.Drawing.Size(121, 472);
+            this.pnlWatchlist.Size = new System.Drawing.Size(140, 472);
             this.pnlWatchlist.TabIndex = 1;
             this.pnlWatchlist.VerticalScrollbarBarColor = true;
             this.pnlWatchlist.VerticalScrollbarHighlightOnWheel = false;
@@ -69,9 +69,9 @@
             // 
             this.cardList.BackColor = System.Drawing.Color.White;
             this.cardList.Controls.Add(this.weatherCard);
-            this.cardList.Location = new System.Drawing.Point(4, 4);
+            this.cardList.Location = new System.Drawing.Point(4, 58);
             this.cardList.Name = "cardList";
-            this.cardList.Size = new System.Drawing.Size(729, 468);
+            this.cardList.Size = new System.Drawing.Size(713, 381);
             this.cardList.TabIndex = 2;
             // 
             // weatherCard

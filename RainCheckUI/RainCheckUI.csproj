@@ -150,5 +150,11 @@
   <ItemGroup>
     <None Include="Resources\BLURandrew-ruiz-1287537-unsplash.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cloud.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flash.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
