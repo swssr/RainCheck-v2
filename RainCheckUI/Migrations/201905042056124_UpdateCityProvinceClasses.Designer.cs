@@ -7,13 +7,13 @@ namespace RainCheckUI.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class i : IMigrationMetadata
+    public sealed partial class UpdateCityProvinceClasses : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(i));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(UpdateCityProvinceClasses));
         
         string IMigrationMetadata.Id
         {
-            get { return "201905022320355_i"; }
+            get { return "201905042056124_UpdateCityProvinceClasses"; }
         }
         
         string IMigrationMetadata.Source

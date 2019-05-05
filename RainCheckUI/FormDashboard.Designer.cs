@@ -31,21 +31,18 @@ namespace RainCheckUI
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dashboardTabControl = new MetroFramework.Controls.MetroTabControl();
             this.tabShowAll = new MetroFramework.Controls.MetroTabPage();
             this.gridViewAll = new MetroFramework.Controls.MetroGrid();
@@ -60,30 +57,45 @@ namespace RainCheckUI
             this.cityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.forecastBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabManageForecasts = new MetroFramework.Controls.MetroTabPage();
-            this.panelUpdateForecast = new MetroFramework.Controls.MetroPanel();
-            this.btnUpdateForecast = new System.Windows.Forms.Button();
-            this.gridForecastToUpdatePreview = new MetroFramework.Controls.MetroGrid();
-            this.cmbForecastCityToUpdate = new MetroFramework.Controls.MetroComboBox();
-            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
-            this.tileDeleteForecast = new MetroFramework.Controls.MetroTile();
-            this.tileUpdateForecast = new MetroFramework.Controls.MetroTile();
-            this.tileAddForecast = new MetroFramework.Controls.MetroTile();
-            this.panelRemoveForecast = new MetroFramework.Controls.MetroPanel();
-            this.btnRemoveForecast = new System.Windows.Forms.Button();
-            this.gridRemoveForecastPreview = new MetroFramework.Controls.MetroGrid();
-            this.cmbCityToRemove = new MetroFramework.Controls.MetroComboBox();
-            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.tabManageLocation = new MetroFramework.Controls.MetroTabPage();
-            this.gridCityPreview = new MetroFramework.Controls.MetroGrid();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.txtSearchProvince = new MetroFramework.Controls.MetroTextBox();
-            this.provinceBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.txtCityName = new MetroFramework.Controls.MetroTextBox();
+            this.forecastDate = new MetroFramework.Controls.MetroDateTime();
+            this.cmbCityForecast = new MetroFramework.Controls.MetroComboBox();
             this.cityBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.btnDeleteForecast = new System.Windows.Forms.Button();
+            this.btnUpdateForecast = new System.Windows.Forms.Button();
+            this.btnNewForecast = new System.Windows.Forms.Button();
+            this.txtWindSpeed = new MetroFramework.Controls.MetroTextBox();
+            this.txtHumidity = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel18 = new MetroFramework.Controls.MetroLabel();
+            this.txtPrecipitation = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel17 = new MetroFramework.Controls.MetroLabel();
+            this.txtMaxTemp = new MetroFramework.Controls.MetroTextBox();
+            this.txtMinTemp = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel19 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
+            this.gridPreviewForecast = new MetroFramework.Controls.MetroGrid();
+            this.forecastDateDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.minTempDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.maxTempDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precipitationDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.humidityDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.windSpeedDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cityIdDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cityDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabManageLocation = new MetroFramework.Controls.MetroTabPage();
+            this.lbValidator = new MetroFramework.Controls.MetroLabel();
+            this.gridCityPreview = new MetroFramework.Controls.MetroGrid();
+            this.cityIdDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cityNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.provinceIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.provinceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnDeleteCity = new System.Windows.Forms.Button();
+            this.btnUpdateCity = new System.Windows.Forms.Button();
+            this.btnAddCity = new System.Windows.Forms.Button();
+            this.txtSearchProvince = new MetroFramework.Controls.MetroTextBox();
+            this.txtCityName = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel14 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel15 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel16 = new MetroFramework.Controls.MetroLabel();
@@ -106,6 +118,7 @@ namespace RainCheckUI
             this.usernameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.passwordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.homeTownDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.provinceBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -138,17 +151,14 @@ namespace RainCheckUI
             ((System.ComponentModel.ISupportInitialize)(this.gridViewAll)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.forecastBindingSource)).BeginInit();
             this.tabManageForecasts.SuspendLayout();
-            this.panelUpdateForecast.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridForecastToUpdatePreview)).BeginInit();
-            this.panelRemoveForecast.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridRemoveForecastPreview)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cityBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridPreviewForecast)).BeginInit();
             this.tabManageLocation.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridCityPreview)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.provinceBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cityBindingSource)).BeginInit();
             this.tabManageUsers.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridAllUsers)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.provinceBindingSource)).BeginInit();
             this.metroTabPage1.SuspendLayout();
             this.panelAddForecast.SuspendLayout();
             this.metroContextMenu1.SuspendLayout();
@@ -162,7 +172,7 @@ namespace RainCheckUI
             this.dashboardTabControl.Controls.Add(this.tabManageUsers);
             this.dashboardTabControl.Location = new System.Drawing.Point(24, 64);
             this.dashboardTabControl.Name = "dashboardTabControl";
-            this.dashboardTabControl.SelectedIndex = 3;
+            this.dashboardTabControl.SelectedIndex = 2;
             this.dashboardTabControl.Size = new System.Drawing.Size(853, 483);
             this.dashboardTabControl.TabIndex = 0;
             this.dashboardTabControl.UseSelectable = true;
@@ -194,14 +204,14 @@ namespace RainCheckUI
             this.gridViewAll.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gridViewAll.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.gridViewAll.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle19.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridViewAll.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridViewAll.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.gridViewAll.ColumnHeadersHeight = 24;
             this.gridViewAll.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.forecastIdDataGridViewTextBoxColumn,
@@ -214,14 +224,14 @@ namespace RainCheckUI
             this.cityIdDataGridViewTextBoxColumn,
             this.cityDataGridViewTextBoxColumn});
             this.gridViewAll.DataSource = this.forecastBindingSource;
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridViewAll.DefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridViewAll.DefaultCellStyle = dataGridViewCellStyle2;
             this.gridViewAll.EnableHeadersVisualStyles = false;
             this.gridViewAll.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.gridViewAll.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -229,14 +239,14 @@ namespace RainCheckUI
             this.gridViewAll.Name = "gridViewAll";
             this.gridViewAll.ReadOnly = true;
             this.gridViewAll.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle21.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridViewAll.RowHeadersDefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridViewAll.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.gridViewAll.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.gridViewAll.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridViewAll.Size = new System.Drawing.Size(846, 443);
@@ -311,11 +321,24 @@ namespace RainCheckUI
             // 
             // tabManageForecasts
             // 
-            this.tabManageForecasts.Controls.Add(this.panelUpdateForecast);
-            this.tabManageForecasts.Controls.Add(this.tileDeleteForecast);
-            this.tabManageForecasts.Controls.Add(this.tileUpdateForecast);
-            this.tabManageForecasts.Controls.Add(this.tileAddForecast);
-            this.tabManageForecasts.Controls.Add(this.panelRemoveForecast);
+            this.tabManageForecasts.Controls.Add(this.forecastDate);
+            this.tabManageForecasts.Controls.Add(this.cmbCityForecast);
+            this.tabManageForecasts.Controls.Add(this.btnDeleteForecast);
+            this.tabManageForecasts.Controls.Add(this.btnUpdateForecast);
+            this.tabManageForecasts.Controls.Add(this.btnNewForecast);
+            this.tabManageForecasts.Controls.Add(this.txtWindSpeed);
+            this.tabManageForecasts.Controls.Add(this.txtHumidity);
+            this.tabManageForecasts.Controls.Add(this.metroLabel18);
+            this.tabManageForecasts.Controls.Add(this.txtPrecipitation);
+            this.tabManageForecasts.Controls.Add(this.metroLabel17);
+            this.tabManageForecasts.Controls.Add(this.txtMaxTemp);
+            this.tabManageForecasts.Controls.Add(this.txtMinTemp);
+            this.tabManageForecasts.Controls.Add(this.metroLabel19);
+            this.tabManageForecasts.Controls.Add(this.metroLabel4);
+            this.tabManageForecasts.Controls.Add(this.metroLabel1);
+            this.tabManageForecasts.Controls.Add(this.metroLabel2);
+            this.tabManageForecasts.Controls.Add(this.metroLabel3);
+            this.tabManageForecasts.Controls.Add(this.gridPreviewForecast);
             this.tabManageForecasts.HorizontalScrollbarBarColor = false;
             this.tabManageForecasts.HorizontalScrollbarHighlightOnWheel = false;
             this.tabManageForecasts.HorizontalScrollbarSize = 10;
@@ -329,269 +352,432 @@ namespace RainCheckUI
             this.tabManageForecasts.VerticalScrollbarHighlightOnWheel = false;
             this.tabManageForecasts.VerticalScrollbarSize = 10;
             // 
-            // panelUpdateForecast
+            // forecastDate
             // 
-            this.panelUpdateForecast.Controls.Add(this.btnUpdateForecast);
-            this.panelUpdateForecast.Controls.Add(this.gridForecastToUpdatePreview);
-            this.panelUpdateForecast.Controls.Add(this.cmbForecastCityToUpdate);
-            this.panelUpdateForecast.Controls.Add(this.metroLabel3);
-            this.panelUpdateForecast.Controls.Add(this.metroLabel4);
-            this.panelUpdateForecast.HorizontalScrollbarBarColor = true;
-            this.panelUpdateForecast.HorizontalScrollbarHighlightOnWheel = false;
-            this.panelUpdateForecast.HorizontalScrollbarSize = 10;
-            this.panelUpdateForecast.Location = new System.Drawing.Point(151, 14);
-            this.panelUpdateForecast.Name = "panelUpdateForecast";
-            this.panelUpdateForecast.Size = new System.Drawing.Size(691, 424);
-            this.panelUpdateForecast.TabIndex = 11;
-            this.panelUpdateForecast.VerticalScrollbarBarColor = true;
-            this.panelUpdateForecast.VerticalScrollbarHighlightOnWheel = false;
-            this.panelUpdateForecast.VerticalScrollbarSize = 10;
+            this.forecastDate.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.forecastBindingSource, "ForecastDate", true));
+            this.forecastDate.Location = new System.Drawing.Point(4, 101);
+            this.forecastDate.MinimumSize = new System.Drawing.Size(0, 29);
+            this.forecastDate.Name = "forecastDate";
+            this.forecastDate.Size = new System.Drawing.Size(340, 29);
+            this.forecastDate.TabIndex = 0;
+            // 
+            // cmbCityForecast
+            // 
+            this.cmbCityForecast.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.forecastBindingSource, "CityId", true));
+            this.cmbCityForecast.DataSource = this.cityBindingSource;
+            this.cmbCityForecast.DisplayMember = "CityName";
+            this.cmbCityForecast.FormattingEnabled = true;
+            this.cmbCityForecast.ItemHeight = 23;
+            this.cmbCityForecast.Location = new System.Drawing.Point(4, 47);
+            this.cmbCityForecast.Name = "cmbCityForecast";
+            this.cmbCityForecast.Size = new System.Drawing.Size(337, 29);
+            this.cmbCityForecast.TabIndex = 0;
+            this.cmbCityForecast.UseSelectable = true;
+            this.cmbCityForecast.ValueMember = "CityId";
+            // 
+            // cityBindingSource
+            // 
+            this.cityBindingSource.DataSource = typeof(RainCheckUI.Model.City);
+            // 
+            // btnDeleteForecast
+            // 
+            this.btnDeleteForecast.BackColor = System.Drawing.Color.Tomato;
+            this.btnDeleteForecast.Cursor = System.Windows.Forms.Cursors.No;
+            this.btnDeleteForecast.FlatAppearance.BorderColor = System.Drawing.Color.Crimson;
+            this.btnDeleteForecast.FlatAppearance.BorderSize = 0;
+            this.btnDeleteForecast.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightCoral;
+            this.btnDeleteForecast.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeleteForecast.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteForecast.Location = new System.Drawing.Point(233, 401);
+            this.btnDeleteForecast.Name = "btnDeleteForecast";
+            this.btnDeleteForecast.Size = new System.Drawing.Size(114, 38);
+            this.btnDeleteForecast.TabIndex = 11;
+            this.btnDeleteForecast.Text = "Delete";
+            this.btnDeleteForecast.UseVisualStyleBackColor = false;
+            this.btnDeleteForecast.Click += new System.EventHandler(this.btnDeleteForecast_Click);
             // 
             // btnUpdateForecast
             // 
             this.btnUpdateForecast.BackColor = System.Drawing.Color.Gold;
+            this.btnUpdateForecast.Cursor = System.Windows.Forms.Cursors.No;
             this.btnUpdateForecast.FlatAppearance.BorderColor = System.Drawing.Color.Crimson;
             this.btnUpdateForecast.FlatAppearance.BorderSize = 0;
             this.btnUpdateForecast.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightCoral;
             this.btnUpdateForecast.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUpdateForecast.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.btnUpdateForecast.Location = new System.Drawing.Point(17, 372);
+            this.btnUpdateForecast.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdateForecast.Location = new System.Drawing.Point(120, 401);
             this.btnUpdateForecast.Name = "btnUpdateForecast";
-            this.btnUpdateForecast.Size = new System.Drawing.Size(162, 49);
-            this.btnUpdateForecast.TabIndex = 5;
+            this.btnUpdateForecast.Size = new System.Drawing.Size(107, 38);
+            this.btnUpdateForecast.TabIndex = 10;
             this.btnUpdateForecast.Text = "Update";
             this.btnUpdateForecast.UseVisualStyleBackColor = false;
             // 
-            // gridForecastToUpdatePreview
+            // btnNewForecast
             // 
-            this.gridForecastToUpdatePreview.AllowUserToAddRows = false;
-            this.gridForecastToUpdatePreview.AllowUserToDeleteRows = false;
-            this.gridForecastToUpdatePreview.AllowUserToResizeRows = false;
-            this.gridForecastToUpdatePreview.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(234)))), ((int)(((byte)(234)))));
-            this.gridForecastToUpdatePreview.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.gridForecastToUpdatePreview.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.gridForecastToUpdatePreview.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle22.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridForecastToUpdatePreview.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle22;
-            this.gridForecastToUpdatePreview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle23.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridForecastToUpdatePreview.DefaultCellStyle = dataGridViewCellStyle23;
-            this.gridForecastToUpdatePreview.EnableHeadersVisualStyles = false;
-            this.gridForecastToUpdatePreview.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.gridForecastToUpdatePreview.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.gridForecastToUpdatePreview.Location = new System.Drawing.Point(17, 137);
-            this.gridForecastToUpdatePreview.Name = "gridForecastToUpdatePreview";
-            this.gridForecastToUpdatePreview.ReadOnly = true;
-            this.gridForecastToUpdatePreview.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle24.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridForecastToUpdatePreview.RowHeadersDefaultCellStyle = dataGridViewCellStyle24;
-            this.gridForecastToUpdatePreview.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.gridForecastToUpdatePreview.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridForecastToUpdatePreview.Size = new System.Drawing.Size(433, 189);
-            this.gridForecastToUpdatePreview.TabIndex = 4;
-            this.gridForecastToUpdatePreview.UseCustomBackColor = true;
-            this.gridForecastToUpdatePreview.UseCustomForeColor = true;
+            this.btnNewForecast.BackColor = System.Drawing.Color.SpringGreen;
+            this.btnNewForecast.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNewForecast.FlatAppearance.BorderColor = System.Drawing.Color.Crimson;
+            this.btnNewForecast.FlatAppearance.BorderSize = 0;
+            this.btnNewForecast.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightCoral;
+            this.btnNewForecast.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNewForecast.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNewForecast.Location = new System.Drawing.Point(4, 401);
+            this.btnNewForecast.Name = "btnNewForecast";
+            this.btnNewForecast.Size = new System.Drawing.Size(108, 38);
+            this.btnNewForecast.TabIndex = 9;
+            this.btnNewForecast.Text = "Add ";
+            this.btnNewForecast.UseVisualStyleBackColor = false;
+            this.btnNewForecast.Click += new System.EventHandler(this.btnNewForecast_Click);
             // 
-            // cmbForecastCityToUpdate
+            // txtWindSpeed
             // 
-            this.cmbForecastCityToUpdate.FormattingEnabled = true;
-            this.cmbForecastCityToUpdate.ItemHeight = 23;
-            this.cmbForecastCityToUpdate.Location = new System.Drawing.Point(17, 45);
-            this.cmbForecastCityToUpdate.Name = "cmbForecastCityToUpdate";
-            this.cmbForecastCityToUpdate.Size = new System.Drawing.Size(430, 29);
-            this.cmbForecastCityToUpdate.TabIndex = 3;
-            this.cmbForecastCityToUpdate.UseSelectable = true;
             // 
-            // metroLabel3
             // 
-            this.metroLabel3.AutoSize = true;
-            this.metroLabel3.Location = new System.Drawing.Point(17, 102);
-            this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(54, 19);
-            this.metroLabel3.TabIndex = 2;
-            this.metroLabel3.Text = "Preview";
+            // 
+            this.txtWindSpeed.CustomButton.Image = null;
+            this.txtWindSpeed.CustomButton.Location = new System.Drawing.Point(313, 1);
+            this.txtWindSpeed.CustomButton.Name = "";
+            this.txtWindSpeed.CustomButton.Size = new System.Drawing.Size(27, 27);
+            this.txtWindSpeed.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtWindSpeed.CustomButton.TabIndex = 1;
+            this.txtWindSpeed.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtWindSpeed.CustomButton.UseSelectable = true;
+            this.txtWindSpeed.CustomButton.Visible = false;
+            this.txtWindSpeed.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.forecastBindingSource, "WindSpeed", true));
+            this.txtWindSpeed.Lines = new string[0];
+            this.txtWindSpeed.Location = new System.Drawing.Point(4, 344);
+            this.txtWindSpeed.MaxLength = 32767;
+            this.txtWindSpeed.Name = "txtWindSpeed";
+            this.txtWindSpeed.PasswordChar = '\0';
+            this.txtWindSpeed.PromptText = "eg. 12";
+            this.txtWindSpeed.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtWindSpeed.SelectedText = "";
+            this.txtWindSpeed.SelectionLength = 0;
+            this.txtWindSpeed.SelectionStart = 0;
+            this.txtWindSpeed.ShortcutsEnabled = true;
+            this.txtWindSpeed.Size = new System.Drawing.Size(341, 29);
+            this.txtWindSpeed.TabIndex = 7;
+            this.txtWindSpeed.UseSelectable = true;
+            this.txtWindSpeed.WaterMark = "eg. 12";
+            this.txtWindSpeed.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtWindSpeed.WaterMarkFont = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // txtHumidity
+            // 
+            // 
+            // 
+            // 
+            this.txtHumidity.CustomButton.Image = null;
+            this.txtHumidity.CustomButton.Location = new System.Drawing.Point(313, 1);
+            this.txtHumidity.CustomButton.Name = "";
+            this.txtHumidity.CustomButton.Size = new System.Drawing.Size(27, 27);
+            this.txtHumidity.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtHumidity.CustomButton.TabIndex = 1;
+            this.txtHumidity.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtHumidity.CustomButton.UseSelectable = true;
+            this.txtHumidity.CustomButton.Visible = false;
+            this.txtHumidity.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.forecastBindingSource, "Humidity", true));
+            this.txtHumidity.Lines = new string[0];
+            this.txtHumidity.Location = new System.Drawing.Point(5, 283);
+            this.txtHumidity.MaxLength = 32767;
+            this.txtHumidity.Name = "txtHumidity";
+            this.txtHumidity.PasswordChar = '\0';
+            this.txtHumidity.PromptText = "eg. 20";
+            this.txtHumidity.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtHumidity.SelectedText = "";
+            this.txtHumidity.SelectionLength = 0;
+            this.txtHumidity.SelectionStart = 0;
+            this.txtHumidity.ShortcutsEnabled = true;
+            this.txtHumidity.Size = new System.Drawing.Size(341, 29);
+            this.txtHumidity.TabIndex = 6;
+            this.txtHumidity.UseSelectable = true;
+            this.txtHumidity.WaterMark = "eg. 20";
+            this.txtHumidity.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtHumidity.WaterMarkFont = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // metroLabel18
+            // 
+            this.metroLabel18.AutoSize = true;
+            this.metroLabel18.Location = new System.Drawing.Point(6, 322);
+            this.metroLabel18.Name = "metroLabel18";
+            this.metroLabel18.Size = new System.Drawing.Size(116, 19);
+            this.metroLabel18.TabIndex = 11;
+            this.metroLabel18.Text = "Wind Speed KM/h";
+            // 
+            // txtPrecipitation
+            // 
+            // 
+            // 
+            // 
+            this.txtPrecipitation.CustomButton.Image = null;
+            this.txtPrecipitation.CustomButton.Location = new System.Drawing.Point(313, 1);
+            this.txtPrecipitation.CustomButton.Name = "";
+            this.txtPrecipitation.CustomButton.Size = new System.Drawing.Size(27, 27);
+            this.txtPrecipitation.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtPrecipitation.CustomButton.TabIndex = 1;
+            this.txtPrecipitation.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtPrecipitation.CustomButton.UseSelectable = true;
+            this.txtPrecipitation.CustomButton.Visible = false;
+            this.txtPrecipitation.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.forecastBindingSource, "Precipitation", true));
+            this.txtPrecipitation.Lines = new string[0];
+            this.txtPrecipitation.Location = new System.Drawing.Point(5, 227);
+            this.txtPrecipitation.MaxLength = 32767;
+            this.txtPrecipitation.Name = "txtPrecipitation";
+            this.txtPrecipitation.PasswordChar = '\0';
+            this.txtPrecipitation.PromptText = "eg. 80";
+            this.txtPrecipitation.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtPrecipitation.SelectedText = "";
+            this.txtPrecipitation.SelectionLength = 0;
+            this.txtPrecipitation.SelectionStart = 0;
+            this.txtPrecipitation.ShortcutsEnabled = true;
+            this.txtPrecipitation.Size = new System.Drawing.Size(341, 29);
+            this.txtPrecipitation.TabIndex = 5;
+            this.txtPrecipitation.UseSelectable = true;
+            this.txtPrecipitation.WaterMark = "eg. 80";
+            this.txtPrecipitation.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtPrecipitation.WaterMarkFont = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // metroLabel17
+            // 
+            this.metroLabel17.AutoSize = true;
+            this.metroLabel17.Location = new System.Drawing.Point(7, 263);
+            this.metroLabel17.Name = "metroLabel17";
+            this.metroLabel17.Size = new System.Drawing.Size(76, 19);
+            this.metroLabel17.TabIndex = 11;
+            this.metroLabel17.Text = "Humidity %";
+            // 
+            // txtMaxTemp
+            // 
+            // 
+            // 
+            // 
+            this.txtMaxTemp.CustomButton.Image = null;
+            this.txtMaxTemp.CustomButton.Location = new System.Drawing.Point(146, 1);
+            this.txtMaxTemp.CustomButton.Name = "";
+            this.txtMaxTemp.CustomButton.Size = new System.Drawing.Size(27, 27);
+            this.txtMaxTemp.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtMaxTemp.CustomButton.TabIndex = 1;
+            this.txtMaxTemp.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtMaxTemp.CustomButton.UseSelectable = true;
+            this.txtMaxTemp.CustomButton.Visible = false;
+            this.txtMaxTemp.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.forecastBindingSource, "MaxTemp", true));
+            this.txtMaxTemp.Lines = new string[0];
+            this.txtMaxTemp.Location = new System.Drawing.Point(173, 162);
+            this.txtMaxTemp.MaxLength = 32767;
+            this.txtMaxTemp.Name = "txtMaxTemp";
+            this.txtMaxTemp.PasswordChar = '\0';
+            this.txtMaxTemp.PromptText = "eg. 25";
+            this.txtMaxTemp.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtMaxTemp.SelectedText = "";
+            this.txtMaxTemp.SelectionLength = 0;
+            this.txtMaxTemp.SelectionStart = 0;
+            this.txtMaxTemp.ShortcutsEnabled = true;
+            this.txtMaxTemp.Size = new System.Drawing.Size(174, 29);
+            this.txtMaxTemp.TabIndex = 4;
+            this.txtMaxTemp.UseSelectable = true;
+            this.txtMaxTemp.WaterMark = "eg. 25";
+            this.txtMaxTemp.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtMaxTemp.WaterMarkFont = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // txtMinTemp
+            // 
+            // 
+            // 
+            // 
+            this.txtMinTemp.CustomButton.Image = null;
+            this.txtMinTemp.CustomButton.Location = new System.Drawing.Point(129, 1);
+            this.txtMinTemp.CustomButton.Name = "";
+            this.txtMinTemp.CustomButton.Size = new System.Drawing.Size(27, 27);
+            this.txtMinTemp.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtMinTemp.CustomButton.TabIndex = 1;
+            this.txtMinTemp.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtMinTemp.CustomButton.UseSelectable = true;
+            this.txtMinTemp.CustomButton.Visible = false;
+            this.txtMinTemp.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.forecastBindingSource, "MinTemp", true));
+            this.txtMinTemp.Lines = new string[0];
+            this.txtMinTemp.Location = new System.Drawing.Point(6, 162);
+            this.txtMinTemp.MaxLength = 32767;
+            this.txtMinTemp.Name = "txtMinTemp";
+            this.txtMinTemp.PasswordChar = '\0';
+            this.txtMinTemp.PromptText = "eg. 0";
+            this.txtMinTemp.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtMinTemp.SelectedText = "";
+            this.txtMinTemp.SelectionLength = 0;
+            this.txtMinTemp.SelectionStart = 0;
+            this.txtMinTemp.ShortcutsEnabled = true;
+            this.txtMinTemp.Size = new System.Drawing.Size(157, 29);
+            this.txtMinTemp.TabIndex = 3;
+            this.txtMinTemp.UseSelectable = true;
+            this.txtMinTemp.WaterMark = "eg. 0";
+            this.txtMinTemp.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtMinTemp.WaterMarkFont = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // metroLabel19
+            // 
+            this.metroLabel19.AutoSize = true;
+            this.metroLabel19.Location = new System.Drawing.Point(176, 134);
+            this.metroLabel19.Name = "metroLabel19";
+            this.metroLabel19.Size = new System.Drawing.Size(70, 19);
+            this.metroLabel19.TabIndex = 11;
+            this.metroLabel19.Text = "Max Temp";
             // 
             // metroLabel4
             // 
             this.metroLabel4.AutoSize = true;
-            this.metroLabel4.Location = new System.Drawing.Point(24, 2);
+            this.metroLabel4.Location = new System.Drawing.Point(9, 201);
             this.metroLabel4.Name = "metroLabel4";
-            this.metroLabel4.Size = new System.Drawing.Size(31, 19);
-            this.metroLabel4.TabIndex = 2;
-            this.metroLabel4.Text = "City";
-            // 
-            // tileDeleteForecast
-            // 
-            this.tileDeleteForecast.ActiveControl = null;
-            this.tileDeleteForecast.BackColor = System.Drawing.Color.White;
-            this.tileDeleteForecast.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.tileDeleteForecast.Location = new System.Drawing.Point(3, 290);
-            this.tileDeleteForecast.Name = "tileDeleteForecast";
-            this.tileDeleteForecast.Size = new System.Drawing.Size(113, 148);
-            this.tileDeleteForecast.TabIndex = 7;
-            this.tileDeleteForecast.Text = "Remove";
-            this.tileDeleteForecast.UseSelectable = true;
-            this.tileDeleteForecast.Click += new System.EventHandler(this.tileDeleteForecast_Click);
-            // 
-            // tileUpdateForecast
-            // 
-            this.tileUpdateForecast.ActiveControl = null;
-            this.tileUpdateForecast.BackColor = System.Drawing.Color.White;
-            this.tileUpdateForecast.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.tileUpdateForecast.Location = new System.Drawing.Point(3, 107);
-            this.tileUpdateForecast.Name = "tileUpdateForecast";
-            this.tileUpdateForecast.Size = new System.Drawing.Size(113, 183);
-            this.tileUpdateForecast.TabIndex = 8;
-            this.tileUpdateForecast.Text = "Update";
-            this.tileUpdateForecast.UseSelectable = true;
-            this.tileUpdateForecast.Click += new System.EventHandler(this.tileUpdateForecast_Click);
-            // 
-            // tileAddForecast
-            // 
-            this.tileAddForecast.ActiveControl = null;
-            this.tileAddForecast.BackColor = System.Drawing.Color.White;
-            this.tileAddForecast.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.tileAddForecast.Location = new System.Drawing.Point(3, 0);
-            this.tileAddForecast.Name = "tileAddForecast";
-            this.tileAddForecast.Size = new System.Drawing.Size(113, 108);
-            this.tileAddForecast.TabIndex = 9;
-            this.tileAddForecast.Text = "Add";
-            this.tileAddForecast.UseSelectable = true;
-            this.tileAddForecast.Click += new System.EventHandler(this.tileAddForecast_Click);
-            // 
-            // panelRemoveForecast
-            // 
-            this.panelRemoveForecast.Controls.Add(this.btnRemoveForecast);
-            this.panelRemoveForecast.Controls.Add(this.gridRemoveForecastPreview);
-            this.panelRemoveForecast.Controls.Add(this.cmbCityToRemove);
-            this.panelRemoveForecast.Controls.Add(this.metroLabel2);
-            this.panelRemoveForecast.Controls.Add(this.metroLabel1);
-            this.panelRemoveForecast.HorizontalScrollbarBarColor = true;
-            this.panelRemoveForecast.HorizontalScrollbarHighlightOnWheel = false;
-            this.panelRemoveForecast.HorizontalScrollbarSize = 10;
-            this.panelRemoveForecast.Location = new System.Drawing.Point(149, 15);
-            this.panelRemoveForecast.Name = "panelRemoveForecast";
-            this.panelRemoveForecast.Size = new System.Drawing.Size(842, 423);
-            this.panelRemoveForecast.TabIndex = 3;
-            this.panelRemoveForecast.VerticalScrollbarBarColor = true;
-            this.panelRemoveForecast.VerticalScrollbarHighlightOnWheel = false;
-            this.panelRemoveForecast.VerticalScrollbarSize = 10;
-            // 
-            // btnRemoveForecast
-            // 
-            this.btnRemoveForecast.BackColor = System.Drawing.Color.Tomato;
-            this.btnRemoveForecast.FlatAppearance.BorderColor = System.Drawing.Color.Crimson;
-            this.btnRemoveForecast.FlatAppearance.BorderSize = 0;
-            this.btnRemoveForecast.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightCoral;
-            this.btnRemoveForecast.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRemoveForecast.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.btnRemoveForecast.Location = new System.Drawing.Point(24, 262);
-            this.btnRemoveForecast.Name = "btnRemoveForecast";
-            this.btnRemoveForecast.Size = new System.Drawing.Size(114, 38);
-            this.btnRemoveForecast.TabIndex = 5;
-            this.btnRemoveForecast.Text = "Delete";
-            this.btnRemoveForecast.UseVisualStyleBackColor = false;
-            // 
-            // gridRemoveForecastPreview
-            // 
-            this.gridRemoveForecastPreview.AllowUserToAddRows = false;
-            this.gridRemoveForecastPreview.AllowUserToDeleteRows = false;
-            this.gridRemoveForecastPreview.AllowUserToResizeRows = false;
-            this.gridRemoveForecastPreview.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(234)))), ((int)(((byte)(234)))));
-            this.gridRemoveForecastPreview.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.gridRemoveForecastPreview.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.gridRemoveForecastPreview.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle25.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle25.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle25.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle25.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridRemoveForecastPreview.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle25;
-            this.gridRemoveForecastPreview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle26.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle26.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle26.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridRemoveForecastPreview.DefaultCellStyle = dataGridViewCellStyle26;
-            this.gridRemoveForecastPreview.EnableHeadersVisualStyles = false;
-            this.gridRemoveForecastPreview.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.gridRemoveForecastPreview.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.gridRemoveForecastPreview.Location = new System.Drawing.Point(24, 95);
-            this.gridRemoveForecastPreview.Name = "gridRemoveForecastPreview";
-            this.gridRemoveForecastPreview.ReadOnly = true;
-            this.gridRemoveForecastPreview.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle27.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle27.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle27.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle27.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridRemoveForecastPreview.RowHeadersDefaultCellStyle = dataGridViewCellStyle27;
-            this.gridRemoveForecastPreview.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.gridRemoveForecastPreview.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridRemoveForecastPreview.Size = new System.Drawing.Size(342, 150);
-            this.gridRemoveForecastPreview.TabIndex = 4;
-            this.gridRemoveForecastPreview.UseCustomBackColor = true;
-            this.gridRemoveForecastPreview.UseCustomForeColor = true;
-            // 
-            // cmbCityToRemove
-            // 
-            this.cmbCityToRemove.FormattingEnabled = true;
-            this.cmbCityToRemove.ItemHeight = 23;
-            this.cmbCityToRemove.Location = new System.Drawing.Point(24, 32);
-            this.cmbCityToRemove.Name = "cmbCityToRemove";
-            this.cmbCityToRemove.Size = new System.Drawing.Size(342, 29);
-            this.cmbCityToRemove.TabIndex = 3;
-            this.cmbCityToRemove.UseSelectable = true;
-            // 
-            // metroLabel2
-            // 
-            this.metroLabel2.AutoSize = true;
-            this.metroLabel2.Location = new System.Drawing.Point(24, 70);
-            this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(54, 19);
-            this.metroLabel2.TabIndex = 2;
-            this.metroLabel2.Text = "Preview";
+            this.metroLabel4.Size = new System.Drawing.Size(82, 19);
+            this.metroLabel4.TabIndex = 11;
+            this.metroLabel4.Text = "Precipitation";
             // 
             // metroLabel1
             // 
             this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(24, 3);
+            this.metroLabel1.Location = new System.Drawing.Point(9, 134);
             this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(31, 19);
-            this.metroLabel1.TabIndex = 2;
-            this.metroLabel1.Text = "City";
+            this.metroLabel1.Size = new System.Drawing.Size(67, 19);
+            this.metroLabel1.TabIndex = 11;
+            this.metroLabel1.Text = "Min Temp";
+            // 
+            // metroLabel2
+            // 
+            this.metroLabel2.AutoSize = true;
+            this.metroLabel2.Location = new System.Drawing.Point(6, 79);
+            this.metroLabel2.Name = "metroLabel2";
+            this.metroLabel2.Size = new System.Drawing.Size(36, 19);
+            this.metroLabel2.TabIndex = 12;
+            this.metroLabel2.Text = "Date";
+            // 
+            // metroLabel3
+            // 
+            this.metroLabel3.AutoSize = true;
+            this.metroLabel3.Location = new System.Drawing.Point(6, 17);
+            this.metroLabel3.Name = "metroLabel3";
+            this.metroLabel3.Size = new System.Drawing.Size(31, 19);
+            this.metroLabel3.TabIndex = 13;
+            this.metroLabel3.Text = "City";
+            // 
+            // gridPreviewForecast
+            // 
+            this.gridPreviewForecast.AllowUserToAddRows = false;
+            this.gridPreviewForecast.AllowUserToDeleteRows = false;
+            this.gridPreviewForecast.AllowUserToResizeRows = false;
+            this.gridPreviewForecast.AutoGenerateColumns = false;
+            this.gridPreviewForecast.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(244)))));
+            this.gridPreviewForecast.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.gridPreviewForecast.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.gridPreviewForecast.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridPreviewForecast.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.gridPreviewForecast.ColumnHeadersHeight = 24;
+            this.gridPreviewForecast.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.forecastDateDataGridViewTextBoxColumn1,
+            this.minTempDataGridViewTextBoxColumn1,
+            this.maxTempDataGridViewTextBoxColumn1,
+            this.precipitationDataGridViewTextBoxColumn1,
+            this.humidityDataGridViewTextBoxColumn1,
+            this.windSpeedDataGridViewTextBoxColumn1,
+            this.cityIdDataGridViewTextBoxColumn3,
+            this.cityDataGridViewTextBoxColumn1});
+            this.gridPreviewForecast.DataSource = this.forecastBindingSource;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridPreviewForecast.DefaultCellStyle = dataGridViewCellStyle5;
+            this.gridPreviewForecast.EnableHeadersVisualStyles = false;
+            this.gridPreviewForecast.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.gridPreviewForecast.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.gridPreviewForecast.Location = new System.Drawing.Point(400, 1);
+            this.gridPreviewForecast.Name = "gridPreviewForecast";
+            this.gridPreviewForecast.ReadOnly = true;
+            this.gridPreviewForecast.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridPreviewForecast.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.gridPreviewForecast.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.gridPreviewForecast.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.gridPreviewForecast.Size = new System.Drawing.Size(443, 438);
+            this.gridPreviewForecast.TabIndex = 10;
+            this.gridPreviewForecast.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridPreviewForecast_CellContentClick);
+            // 
+            // forecastDateDataGridViewTextBoxColumn1
+            // 
+            this.forecastDateDataGridViewTextBoxColumn1.DataPropertyName = "ForecastDate";
+            this.forecastDateDataGridViewTextBoxColumn1.HeaderText = "ForecastDate";
+            this.forecastDateDataGridViewTextBoxColumn1.Name = "forecastDateDataGridViewTextBoxColumn1";
+            this.forecastDateDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // minTempDataGridViewTextBoxColumn1
+            // 
+            this.minTempDataGridViewTextBoxColumn1.DataPropertyName = "MinTemp";
+            this.minTempDataGridViewTextBoxColumn1.HeaderText = "Min Temp";
+            this.minTempDataGridViewTextBoxColumn1.Name = "minTempDataGridViewTextBoxColumn1";
+            this.minTempDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // maxTempDataGridViewTextBoxColumn1
+            // 
+            this.maxTempDataGridViewTextBoxColumn1.DataPropertyName = "MaxTemp";
+            this.maxTempDataGridViewTextBoxColumn1.HeaderText = "Max Temp";
+            this.maxTempDataGridViewTextBoxColumn1.Name = "maxTempDataGridViewTextBoxColumn1";
+            this.maxTempDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // precipitationDataGridViewTextBoxColumn1
+            // 
+            this.precipitationDataGridViewTextBoxColumn1.DataPropertyName = "Precipitation";
+            this.precipitationDataGridViewTextBoxColumn1.HeaderText = "Precipitation";
+            this.precipitationDataGridViewTextBoxColumn1.Name = "precipitationDataGridViewTextBoxColumn1";
+            this.precipitationDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // humidityDataGridViewTextBoxColumn1
+            // 
+            this.humidityDataGridViewTextBoxColumn1.DataPropertyName = "Humidity";
+            this.humidityDataGridViewTextBoxColumn1.HeaderText = "Humidity";
+            this.humidityDataGridViewTextBoxColumn1.Name = "humidityDataGridViewTextBoxColumn1";
+            this.humidityDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // windSpeedDataGridViewTextBoxColumn1
+            // 
+            this.windSpeedDataGridViewTextBoxColumn1.DataPropertyName = "WindSpeed";
+            this.windSpeedDataGridViewTextBoxColumn1.HeaderText = "WindSpeed";
+            this.windSpeedDataGridViewTextBoxColumn1.Name = "windSpeedDataGridViewTextBoxColumn1";
+            this.windSpeedDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // cityIdDataGridViewTextBoxColumn3
+            // 
+            this.cityIdDataGridViewTextBoxColumn3.DataPropertyName = "CityId";
+            this.cityIdDataGridViewTextBoxColumn3.HeaderText = "CityId";
+            this.cityIdDataGridViewTextBoxColumn3.Name = "cityIdDataGridViewTextBoxColumn3";
+            this.cityIdDataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // cityDataGridViewTextBoxColumn1
+            // 
+            this.cityDataGridViewTextBoxColumn1.DataPropertyName = "City";
+            this.cityDataGridViewTextBoxColumn1.HeaderText = "City";
+            this.cityDataGridViewTextBoxColumn1.Name = "cityDataGridViewTextBoxColumn1";
+            this.cityDataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // tabManageLocation
             // 
+            this.tabManageLocation.Controls.Add(this.lbValidator);
             this.tabManageLocation.Controls.Add(this.gridCityPreview);
-            this.tabManageLocation.Controls.Add(this.button2);
-            this.tabManageLocation.Controls.Add(this.button3);
-            this.tabManageLocation.Controls.Add(this.button4);
+            this.tabManageLocation.Controls.Add(this.btnDeleteCity);
+            this.tabManageLocation.Controls.Add(this.btnUpdateCity);
+            this.tabManageLocation.Controls.Add(this.btnAddCity);
             this.tabManageLocation.Controls.Add(this.txtSearchProvince);
             this.tabManageLocation.Controls.Add(this.txtCityName);
             this.tabManageLocation.Controls.Add(this.metroLabel14);
@@ -610,96 +796,145 @@ namespace RainCheckUI
             this.tabManageLocation.VerticalScrollbarHighlightOnWheel = false;
             this.tabManageLocation.VerticalScrollbarSize = 10;
             // 
+            // lbValidator
+            // 
+            this.lbValidator.AutoSize = true;
+            this.lbValidator.Location = new System.Drawing.Point(4, 285);
+            this.lbValidator.Name = "lbValidator";
+            this.lbValidator.Size = new System.Drawing.Size(0, 0);
+            this.lbValidator.TabIndex = 24;
+            // 
             // gridCityPreview
             // 
+            this.gridCityPreview.AllowUserToAddRows = false;
+            this.gridCityPreview.AllowUserToDeleteRows = false;
             this.gridCityPreview.AllowUserToResizeRows = false;
+            this.gridCityPreview.AutoGenerateColumns = false;
             this.gridCityPreview.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(244)))));
             this.gridCityPreview.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gridCityPreview.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.gridCityPreview.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle28.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle28.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle28.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle28.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle28.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle28.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridCityPreview.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle28;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridCityPreview.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.gridCityPreview.ColumnHeadersHeight = 24;
-            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle29.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle29.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle29.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle29.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle29.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridCityPreview.DefaultCellStyle = dataGridViewCellStyle29;
+            this.gridCityPreview.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.cityIdDataGridViewTextBoxColumn2,
+            this.cityNameDataGridViewTextBoxColumn,
+            this.provinceIdDataGridViewTextBoxColumn,
+            this.provinceDataGridViewTextBoxColumn});
+            this.gridCityPreview.DataSource = this.cityBindingSource;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridCityPreview.DefaultCellStyle = dataGridViewCellStyle8;
             this.gridCityPreview.EnableHeadersVisualStyles = false;
             this.gridCityPreview.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.gridCityPreview.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.gridCityPreview.Location = new System.Drawing.Point(401, 0);
             this.gridCityPreview.Name = "gridCityPreview";
+            this.gridCityPreview.ReadOnly = true;
             this.gridCityPreview.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle30.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle30.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle30.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle30.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle30.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle30.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridCityPreview.RowHeadersDefaultCellStyle = dataGridViewCellStyle30;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridCityPreview.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.gridCityPreview.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.gridCityPreview.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridCityPreview.Size = new System.Drawing.Size(441, 438);
             this.gridCityPreview.TabIndex = 23;
             // 
-            // button2
+            // cityIdDataGridViewTextBoxColumn2
             // 
-            this.button2.BackColor = System.Drawing.Color.Tomato;
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Crimson;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightCoral;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(230, 400);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(114, 38);
-            this.button2.TabIndex = 18;
-            this.button2.Text = "Delete";
-            this.button2.UseVisualStyleBackColor = false;
+            this.cityIdDataGridViewTextBoxColumn2.DataPropertyName = "CityId";
+            this.cityIdDataGridViewTextBoxColumn2.HeaderText = "CityId";
+            this.cityIdDataGridViewTextBoxColumn2.Name = "cityIdDataGridViewTextBoxColumn2";
+            this.cityIdDataGridViewTextBoxColumn2.ReadOnly = true;
             // 
-            // button3
+            // cityNameDataGridViewTextBoxColumn
             // 
-            this.button3.BackColor = System.Drawing.Color.Gold;
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.Crimson;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightCoral;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(117, 400);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(107, 38);
-            this.button3.TabIndex = 19;
-            this.button3.Text = "Update";
-            this.button3.UseVisualStyleBackColor = false;
+            this.cityNameDataGridViewTextBoxColumn.DataPropertyName = "CityName";
+            this.cityNameDataGridViewTextBoxColumn.HeaderText = "CityName";
+            this.cityNameDataGridViewTextBoxColumn.Name = "cityNameDataGridViewTextBoxColumn";
+            this.cityNameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // button4
+            // provinceIdDataGridViewTextBoxColumn
             // 
-            this.button4.BackColor = System.Drawing.Color.SpringGreen;
-            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.Crimson;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightCoral;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(3, 400);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(108, 38);
-            this.button4.TabIndex = 20;
-            this.button4.Text = "Add User";
-            this.button4.UseVisualStyleBackColor = false;
+            this.provinceIdDataGridViewTextBoxColumn.DataPropertyName = "ProvinceId";
+            this.provinceIdDataGridViewTextBoxColumn.HeaderText = "ProvinceId";
+            this.provinceIdDataGridViewTextBoxColumn.Name = "provinceIdDataGridViewTextBoxColumn";
+            this.provinceIdDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // provinceDataGridViewTextBoxColumn
+            // 
+            this.provinceDataGridViewTextBoxColumn.DataPropertyName = "Province";
+            this.provinceDataGridViewTextBoxColumn.HeaderText = "Province";
+            this.provinceDataGridViewTextBoxColumn.Name = "provinceDataGridViewTextBoxColumn";
+            this.provinceDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // btnDeleteCity
+            // 
+            this.btnDeleteCity.BackColor = System.Drawing.Color.Tomato;
+            this.btnDeleteCity.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDeleteCity.FlatAppearance.BorderColor = System.Drawing.Color.Crimson;
+            this.btnDeleteCity.FlatAppearance.BorderSize = 0;
+            this.btnDeleteCity.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightCoral;
+            this.btnDeleteCity.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeleteCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteCity.Location = new System.Drawing.Point(230, 400);
+            this.btnDeleteCity.Name = "btnDeleteCity";
+            this.btnDeleteCity.Size = new System.Drawing.Size(114, 38);
+            this.btnDeleteCity.TabIndex = 18;
+            this.btnDeleteCity.Text = "Delete";
+            this.btnDeleteCity.UseVisualStyleBackColor = false;
+            this.btnDeleteCity.Click += new System.EventHandler(this.btnDeleteCity_Click);
+            // 
+            // btnUpdateCity
+            // 
+            this.btnUpdateCity.BackColor = System.Drawing.Color.Gold;
+            this.btnUpdateCity.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnUpdateCity.FlatAppearance.BorderColor = System.Drawing.Color.Crimson;
+            this.btnUpdateCity.FlatAppearance.BorderSize = 0;
+            this.btnUpdateCity.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightCoral;
+            this.btnUpdateCity.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdateCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdateCity.Location = new System.Drawing.Point(117, 400);
+            this.btnUpdateCity.Name = "btnUpdateCity";
+            this.btnUpdateCity.Size = new System.Drawing.Size(107, 38);
+            this.btnUpdateCity.TabIndex = 19;
+            this.btnUpdateCity.Text = "Update";
+            this.btnUpdateCity.UseVisualStyleBackColor = false;
+            this.btnUpdateCity.Click += new System.EventHandler(this.btnUpdateCity_Click);
+            // 
+            // btnAddCity
+            // 
+            this.btnAddCity.BackColor = System.Drawing.Color.SpringGreen;
+            this.btnAddCity.Cursor = System.Windows.Forms.Cursors.No;
+            this.btnAddCity.FlatAppearance.BorderColor = System.Drawing.Color.Crimson;
+            this.btnAddCity.FlatAppearance.BorderSize = 0;
+            this.btnAddCity.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightCoral;
+            this.btnAddCity.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddCity.Location = new System.Drawing.Point(3, 400);
+            this.btnAddCity.Name = "btnAddCity";
+            this.btnAddCity.Size = new System.Drawing.Size(108, 38);
+            this.btnAddCity.TabIndex = 20;
+            this.btnAddCity.Text = "Add City";
+            this.btnAddCity.UseVisualStyleBackColor = false;
+            this.btnAddCity.Click += new System.EventHandler(this.btnAddCity_Click);
             // 
             // txtSearchProvince
             // 
@@ -715,7 +950,6 @@ namespace RainCheckUI
             this.txtSearchProvince.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txtSearchProvince.CustomButton.UseSelectable = true;
             this.txtSearchProvince.CustomButton.Visible = false;
-            this.txtSearchProvince.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.provinceBindingSource, "ProvinceName", true));
             this.txtSearchProvince.Lines = new string[0];
             this.txtSearchProvince.Location = new System.Drawing.Point(4, 233);
             this.txtSearchProvince.MaxLength = 32767;
@@ -734,10 +968,6 @@ namespace RainCheckUI
             this.txtSearchProvince.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtSearchProvince.WaterMarkFont = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
-            // provinceBindingSource
-            // 
-            this.provinceBindingSource.DataSource = typeof(RainCheckUI.Model.Province);
-            // 
             // txtCityName
             // 
             // 
@@ -752,7 +982,6 @@ namespace RainCheckUI
             this.txtCityName.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txtCityName.CustomButton.UseSelectable = true;
             this.txtCityName.CustomButton.Visible = false;
-            this.txtCityName.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cityBindingSource, "CityName", true));
             this.txtCityName.Lines = new string[0];
             this.txtCityName.Location = new System.Drawing.Point(3, 99);
             this.txtCityName.MaxLength = 32767;
@@ -770,10 +999,6 @@ namespace RainCheckUI
             this.txtCityName.WaterMark = "eg. Durban";
             this.txtCityName.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtCityName.WaterMarkFont = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
-            // cityBindingSource
-            // 
-            this.cityBindingSource.DataSource = typeof(RainCheckUI.Model.City);
             // 
             // metroLabel14
             // 
@@ -1028,14 +1253,14 @@ namespace RainCheckUI
             this.gridAllUsers.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gridAllUsers.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.gridAllUsers.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridAllUsers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridAllUsers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.gridAllUsers.ColumnHeadersHeight = 24;
             this.gridAllUsers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Username,
@@ -1045,14 +1270,14 @@ namespace RainCheckUI
             this.passwordDataGridViewTextBoxColumn,
             this.homeTownDataGridViewTextBoxColumn});
             this.gridAllUsers.DataSource = this.userBindingSource;
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridAllUsers.DefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridAllUsers.DefaultCellStyle = dataGridViewCellStyle11;
             this.gridAllUsers.EnableHeadersVisualStyles = false;
             this.gridAllUsers.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.gridAllUsers.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -1060,14 +1285,14 @@ namespace RainCheckUI
             this.gridAllUsers.Name = "gridAllUsers";
             this.gridAllUsers.ReadOnly = true;
             this.gridAllUsers.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridAllUsers.RowHeadersDefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridAllUsers.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.gridAllUsers.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.gridAllUsers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridAllUsers.Size = new System.Drawing.Size(443, 438);
@@ -1115,6 +1340,10 @@ namespace RainCheckUI
             this.homeTownDataGridViewTextBoxColumn.HeaderText = "Home Town";
             this.homeTownDataGridViewTextBoxColumn.Name = "homeTownDataGridViewTextBoxColumn";
             this.homeTownDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // provinceBindingSource
+            // 
+            this.provinceBindingSource.DataSource = typeof(RainCheckUI.Model.Province);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -1510,6 +1739,7 @@ namespace RainCheckUI
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.dashboardTabControl);
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(900, 600);
             this.Name = "FormDashboard";
             this.Text = "Dashboard";
             this.dashboardTabControl.ResumeLayout(false);
@@ -1517,21 +1747,17 @@ namespace RainCheckUI
             ((System.ComponentModel.ISupportInitialize)(this.gridViewAll)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.forecastBindingSource)).EndInit();
             this.tabManageForecasts.ResumeLayout(false);
-            this.panelUpdateForecast.ResumeLayout(false);
-            this.panelUpdateForecast.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridForecastToUpdatePreview)).EndInit();
-            this.panelRemoveForecast.ResumeLayout(false);
-            this.panelRemoveForecast.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridRemoveForecastPreview)).EndInit();
+            this.tabManageForecasts.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cityBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridPreviewForecast)).EndInit();
             this.tabManageLocation.ResumeLayout(false);
             this.tabManageLocation.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridCityPreview)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.provinceBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cityBindingSource)).EndInit();
             this.tabManageUsers.ResumeLayout(false);
             this.tabManageUsers.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridAllUsers)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.provinceBindingSource)).EndInit();
             this.metroTabPage1.ResumeLayout(false);
             this.panelAddForecast.ResumeLayout(false);
             this.panelAddForecast.PerformLayout();
@@ -1547,18 +1773,6 @@ namespace RainCheckUI
         private MetroFramework.Controls.MetroTabPage tabManageForecasts;
         private MetroFramework.Controls.MetroTabPage tabManageLocation;
         private MetroFramework.Controls.MetroTabPage tabManageUsers;
-        private MetroFramework.Controls.MetroPanel panelRemoveForecast;
-        private MetroFramework.Controls.MetroComboBox cmbCityToRemove;
-        private MetroFramework.Controls.MetroLabel metroLabel2;
-        private MetroFramework.Controls.MetroLabel metroLabel1;
-        private System.Windows.Forms.Button btnRemoveForecast;
-        private MetroFramework.Controls.MetroGrid gridRemoveForecastPreview;
-        private MetroFramework.Controls.MetroPanel panelUpdateForecast;
-        private System.Windows.Forms.Button btnUpdateForecast;
-        private MetroFramework.Controls.MetroGrid gridForecastToUpdatePreview;
-        private MetroFramework.Controls.MetroComboBox cmbForecastCityToUpdate;
-        private MetroFramework.Controls.MetroLabel metroLabel3;
-        private MetroFramework.Controls.MetroLabel metroLabel4;
         private MetroFramework.Controls.MetroGrid gridViewAll;
         private System.Windows.Forms.BindingSource forecastBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn forecastIdDataGridViewTextBoxColumn;
@@ -1570,9 +1784,6 @@ namespace RainCheckUI
         private System.Windows.Forms.DataGridViewTextBoxColumn windSpeedDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn cityIdDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn cityDataGridViewTextBoxColumn;
-        private MetroFramework.Controls.MetroTile tileDeleteForecast;
-        private MetroFramework.Controls.MetroTile tileUpdateForecast;
-        private MetroFramework.Controls.MetroTile tileAddForecast;
         private MetroFramework.Controls.MetroGrid gridAllUsers;
         private System.Windows.Forms.BindingSource userBindingSource;
         private MetroFramework.Controls.MetroCheckBox chkMakeAdmin;
@@ -1586,9 +1797,9 @@ namespace RainCheckUI
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.Button btnDeleteUser;
         private System.Windows.Forms.Button btnUpdateUser;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnDeleteCity;
+        private System.Windows.Forms.Button btnUpdateCity;
+        private System.Windows.Forms.Button btnAddCity;
         private MetroFramework.Controls.MetroTextBox txtCityName;
         private MetroFramework.Controls.MetroLabel metroLabel14;
         private MetroFramework.Controls.MetroLabel metroLabel16;
@@ -1631,6 +1842,37 @@ namespace RainCheckUI
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private MetroFramework.Controls.MetroLabel lbValidator;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cityIdDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cityNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn provinceIdDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn provinceDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button btnDeleteForecast;
+        private System.Windows.Forms.Button btnUpdateForecast;
+        private System.Windows.Forms.Button btnNewForecast;
+        private MetroFramework.Controls.MetroTextBox txtMinTemp;
+        private MetroFramework.Controls.MetroLabel metroLabel1;
+        private MetroFramework.Controls.MetroLabel metroLabel2;
+        private MetroFramework.Controls.MetroLabel metroLabel3;
+        private MetroFramework.Controls.MetroGrid gridPreviewForecast;
+        private System.Windows.Forms.DataGridViewTextBoxColumn forecastDateDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn minTempDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn maxTempDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn precipitationDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn humidityDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn windSpeedDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cityIdDataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cityDataGridViewTextBoxColumn1;
+        private MetroFramework.Controls.MetroDateTime forecastDate;
+        private MetroFramework.Controls.MetroComboBox cmbCityForecast;
+        private MetroFramework.Controls.MetroTextBox txtWindSpeed;
+        private MetroFramework.Controls.MetroTextBox txtHumidity;
+        private MetroFramework.Controls.MetroLabel metroLabel18;
+        private MetroFramework.Controls.MetroTextBox txtPrecipitation;
+        private MetroFramework.Controls.MetroLabel metroLabel17;
+        private MetroFramework.Controls.MetroTextBox txtMaxTemp;
+        private MetroFramework.Controls.MetroLabel metroLabel19;
+        private MetroFramework.Controls.MetroLabel metroLabel4;
     }
 }
 

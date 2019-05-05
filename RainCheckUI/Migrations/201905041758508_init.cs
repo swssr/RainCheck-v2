@@ -3,7 +3,7 @@ namespace RainCheckUI.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class i : DbMigration
+    public partial class init : DbMigration
     {
         public override void Up()
         {
@@ -53,12 +53,13 @@ namespace RainCheckUI.Migrations
                 "dbo.Users",
                 c => new
                     {
-                        Username = c.String(nullable: false, maxLength: 128),
+                        UserId = c.Int(nullable: false, identity: true),
+                        Username = c.String(),
                         Password = c.String(nullable: false),
                         isAdmin = c.Boolean(nullable: false),
                         CityId = c.Int(),
                     })
-                .PrimaryKey(t => t.Username)
+                .PrimaryKey(t => t.UserId)
                 .ForeignKey("dbo.Cities", t => t.CityId)
                 .Index(t => t.CityId);
             

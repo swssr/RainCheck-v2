@@ -10,11 +10,7 @@ namespace RainCheckUI.Model
     {
         public int ProvinceId { get; set; }
         public string ProvinceName { get; set; }
-        public Province()
-        {
-            this.Cities = new List<City>();
-        }
 
-        public virtual ICollection<City> Cities { get; set; }
+        public ICollection<City> Cities { get; set; }
     }
 }

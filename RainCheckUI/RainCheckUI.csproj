@@ -62,15 +62,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Helpers\FormBase.cs" />
     <Compile Include="FormDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormDashboard.Designer.cs">
       <DependentUpon>FormDashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201905022320355_i.cs" />
-    <Compile Include="Migrations\201905022320355_i.Designer.cs">
-      <DependentUpon>201905022320355_i.cs</DependentUpon>
+    <Compile Include="Helpers\BaseHelper.cs" />
+    <Compile Include="Helpers\LocationsHelper.cs" />
+    <Compile Include="Migrations\201905041758508_init.cs" />
+    <Compile Include="Migrations\201905041758508_init.Designer.cs">
+      <DependentUpon>201905041758508_init.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905042056124_UpdateCityProvinceClasses.cs" />
+    <Compile Include="Migrations\201905042056124_UpdateCityProvinceClasses.Designer.cs">
+      <DependentUpon>201905042056124_UpdateCityProvinceClasses.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\City.cs" />
@@ -85,8 +92,11 @@
     <EmbeddedResource Include="FormDashboard.resx">
       <DependentUpon>FormDashboard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201905022320355_i.resx">
-      <DependentUpon>201905022320355_i.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201905041758508_init.resx">
+      <DependentUpon>201905041758508_init.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905042056124_UpdateCityProvinceClasses.resx">
+      <DependentUpon>201905042056124_UpdateCityProvinceClasses.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

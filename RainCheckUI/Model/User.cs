@@ -10,6 +10,7 @@ namespace RainCheckUI.Model
     public class User
     {
         [Key]
+        public int UserId { get; set; }
         public string Username { get; set; }
         [Required, MinLength(8, ErrorMessage = "Password should have at least 8 characters")]
         public string Password { get; set; }
