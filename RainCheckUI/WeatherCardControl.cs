@@ -51,5 +51,18 @@ namespace RainCheckUI
         {
             InitializeComponent();
         }
+
+        private void panel1_MouseEnter(object sender, EventArgs e)
+        {
+            panel1.BackColor = Color.FromArgb(182, 186, 195);
+            this.BackColor = Color.FromArgb(182, 186, 195);
+        }
+
+        private void panel1_MouseLeave(object sender, EventArgs e)
+        {
+            panel1.BackColor = Color.White;
+            this.BackColor = Color.White;
+
+        }
     }
 }
