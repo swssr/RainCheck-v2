@@ -91,7 +91,7 @@ namespace RainCheckUI
 
             }
         }
-        
+
         private void HomePageForm_Load(object sender, EventArgs e)
         {
             spawnCards();
@@ -129,10 +129,20 @@ namespace RainCheckUI
 
         private void btnQuit_Click(object sender, EventArgs e)
         {
-            if(MetroFramework.MetroMessageBox.Show(this, "Are you sure you want to quit application?", "Exit Application", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            if (MetroFramework.MetroMessageBox.Show(this, "Are you sure you want to quit application?", "Exit Application", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
                 Application.Exit();
             }
         }
+        private void btnToggleMenu_Click(object sender, EventArgs e)
+        {
+            //isMenuVisible = !isMenuVisible;
+
+        }
+
+        private void timer_Tick(object sender, EventArgs e)
+        {
+        }
+
     }
 }

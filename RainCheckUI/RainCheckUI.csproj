@@ -62,6 +62,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DetailedCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DetailedCard.Designer.cs">
+      <DependentUpon>DetailedCard.cs</DependentUpon>
+    </Compile>
     <Compile Include="Helpers\FormBase.cs" />
     <Compile Include="FormDashboard.cs">
       <SubType>Form</SubType>
@@ -155,6 +161,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\flash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\umbrella.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\andre-benz-1111393-unsplash.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\andre-benz-1199458-unsplash.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

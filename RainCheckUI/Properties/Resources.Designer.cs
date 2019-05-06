@@ -63,6 +63,26 @@ namespace RainCheckUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap andre_benz_1111393_unsplash {
+            get {
+                object obj = ResourceManager.GetObject("andre-benz-1111393-unsplash", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap andre_benz_1199458_unsplash {
+            get {
+                object obj = ResourceManager.GetObject("andre-benz-1199458-unsplash", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap BLURandrew_ruiz_1287537_unsplash {
             get {
                 object obj = ResourceManager.GetObject("BLURandrew-ruiz-1287537-unsplash", resourceCulture);
@@ -86,6 +106,16 @@ namespace RainCheckUI.Properties {
         internal static System.Drawing.Bitmap flash {
             get {
                 object obj = ResourceManager.GetObject("flash", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap umbrella {
+            get {
+                object obj = ResourceManager.GetObject("umbrella", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
