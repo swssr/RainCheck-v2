@@ -36,7 +36,7 @@ namespace RainCheckUI
         public DateTime ForecastDate
         {
             get { return _forecastDate; }
-            set { _forecastDate = value; lbDate.Text = value.ToString();  }
+            set { _forecastDate = value; lbDate.Text = value.ToLongTimeString();  }
         }
 
         public Image Icon
@@ -64,5 +64,6 @@ namespace RainCheckUI
             this.BackColor = Color.White;
 
         }
+
     }
 }

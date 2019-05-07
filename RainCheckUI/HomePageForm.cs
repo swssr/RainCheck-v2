@@ -1,4 +1,5 @@
-﻿using RainCheckUI.Model;
+﻿using RainCheckUI.Helpers;
+using RainCheckUI.Model;
 using RainCheckUI.Properties;
 using System;
 using System.Collections.Generic;
@@ -18,7 +19,22 @@ namespace RainCheckUI
 
         List<string> watchList = new List<string>();
         ISet<string> cities = new SortedSet<string>();
+        //Prep-up the search textbox for autocomplete
+        public void prepSearch()
+        {
+            txtGlobalSearch.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            txtGlobalSearch.AutoCompleteSource = AutoCompleteSource.CustomSource;
 
+            AutoCompleteStringCollection suggestions = new AutoCompleteStringCollection();
+            string[] cityNames = _context.Cities.Distinct().Select(c => c.CityName).ToArray();
+
+
+            foreach (var item in cityNames)
+            {
+                suggestions.Add(item);
+            }
+            txtGlobalSearch.AutoCompleteCustomSource = suggestions;
+        }
         public void populateWatchList()
         {
             foreach (var city in _context.Cities)
@@ -27,7 +43,55 @@ namespace RainCheckUI
             }
 
         }
+        private void populateMainCard()
+        {
+            User activeUser = _context.Users.Where(user => user.isAdmin == false).FirstOrDefault();
+            Forecast homeForecast = _context.Forecasts.Where(f => f.CityId == activeUser.CityId).FirstOrDefault();
+            City userCity = _context.Cities.FirstOrDefault(c => c.CityId == activeUser.CityId);
+            Province userProvice = _context.Provinces.Where(p => p.ProvinceId == userCity.ProvinceId).FirstOrDefault();
 
+            string userProvinceShort = StringHelper.Initialize(userCity.Province.ProvinceName);
+            string userCityStr = StringHelper.FirstCharToUpper(userCity.CityName);
+
+            Func<string> speedUnit = () => getUnits() == null ? "km/h" : getUnits();
+
+            homeTemp.Text = homeForecast.MaxTemp.ToString();
+            lbHomeTown.Text = $"{userCityStr}, {userProvinceShort}";
+            homeHumidity.Text = $"Humidity {homeForecast.Humidity}%";
+            homeLastUpdated.Text = $"Last updated {homeForecast.ForecastDate.ToShortTimeString()}";
+            homePrecip.Text = $"Precip {homeForecast.Precipitation}%";
+            homeWindSpeed.Text = $"Wind {homeForecast.WindSpeed} {speedUnit()}";
+            homeWeatherIcon.Image = GetRandomIcon();
+
+        }
+        //Implement unit switching logic
+        private string getUnits()
+        {
+            return null;
+        }
+
+        //Determines which icon to use by checking avarage tempetures and precipation
+        //Could save my energy if I just save the summary on db.
+        public Image GetRandomIcon()
+        {
+            Random random = new Random();
+            int chance = random.Next(1, 4);
+
+            //Precipitation will take precedence
+            switch (chance)
+            {
+                case 1:
+                    return Resources.zcloud;
+                case 2:
+                    return Resources.sunny;
+                case 3:
+                    return Resources.rain;
+                case 4:
+                    return Resources.zcloud;
+                default:
+                    return Resources.cloud;
+            }
+        }
         public void spawnCards()
         {
             //int COUNT = 1;
@@ -36,34 +100,6 @@ namespace RainCheckUI
             Forecast[] forecasts = _context.Forecasts
                                    .OrderByDescending(f => f.ForecastDate)
                                    .ToArray();
-            //if watchlsit can
-            //if (forecasts.Length >= 3 && watchList.Count >= 1)
-            //{
-            //    List<Forecast> toWatch = new List<Forecast>();
-
-            //    foreach (var item in watchList)
-            //    {
-            //        toWatch.Add(forecasts.Where(f => f.City.CityName == item).FirstOrDefault());
-            //    }
-            //    forecasts = toWatch.ToArray();
-            //}
-            //Determines which to use by checking avarage tempetures and precipation
-            Func<Forecast, Image> GetIcon = (obj) =>
-            {
-                string summary = "";
-
-                if (obj.MaxTemp < 15)
-                {
-                    summary = "cloudy";
-                }
-                //Handle all weather cases
-                switch (summary)
-                {
-                    case "hot":
-                        return Resources.flash;
-                    default: return Resources.cloud;
-                }
-            };
             //Clear out the flow layout before adding anything
             if (cardList.Controls.Count > 0)
             {
@@ -81,7 +117,7 @@ namespace RainCheckUI
                     MinTemp = forecast.MinTemp,
                     MaxTemp = forecast.MaxTemp,
                     ForecastDate = forecast.ForecastDate,
-                    Icon = GetIcon(forecast)
+                    Icon = GetRandomIcon()
                 };
                 //Card width and height
                 tempCard.Width = (cardList.Width / 4) - 12;
@@ -96,6 +132,8 @@ namespace RainCheckUI
         {
             spawnCards();
             populateWatchList();
+            populateMainCard();
+            prepSearch();
         }
 
         private void loginToolStripMenuItem_Click(object sender, EventArgs e)
@@ -131,18 +169,22 @@ namespace RainCheckUI
         {
             if (MetroFramework.MetroMessageBox.Show(this, "Are you sure you want to quit application?", "Exit Application", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
-                Application.Exit();
+                this.Dispose();
             }
-        }
-        private void btnToggleMenu_Click(object sender, EventArgs e)
-        {
-            //isMenuVisible = !isMenuVisible;
-
         }
 
         private void timer_Tick(object sender, EventArgs e)
         {
+            lbcurrTime.Text = DateTime.Now.ToShortTimeString();
         }
 
+        private void btnDashboard_Click(object sender, EventArgs e)
+        {
+            using(var dash = new FormDashboard())
+            {
+                dash.ShowDialog();
+            }
+            this.Hide();
+        }
     }
 }

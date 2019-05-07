@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 
 namespace RainCheckUI
 {
@@ -118,9 +119,9 @@ namespace RainCheckUI
             this.usernameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.passwordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.homeTownDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnRefresh = new System.Windows.Forms.Button();
             this.provinceBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnRefresh = new System.Windows.Forms.Button();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
@@ -146,6 +147,12 @@ namespace RainCheckUI
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iconStrip = new System.Windows.Forms.Panel();
+            this.btnDashboard = new System.Windows.Forms.Button();
+            this.btnToggleMenu = new System.Windows.Forms.Button();
+            this.btnMinimize = new System.Windows.Forms.Button();
+            this.btnQuit = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.dashboardTabControl.SuspendLayout();
             this.tabShowAll.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewAll)).BeginInit();
@@ -162,6 +169,7 @@ namespace RainCheckUI
             this.metroTabPage1.SuspendLayout();
             this.panelAddForecast.SuspendLayout();
             this.metroContextMenu1.SuspendLayout();
+            this.iconStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // dashboardTabControl
@@ -170,10 +178,10 @@ namespace RainCheckUI
             this.dashboardTabControl.Controls.Add(this.tabManageForecasts);
             this.dashboardTabControl.Controls.Add(this.tabManageLocation);
             this.dashboardTabControl.Controls.Add(this.tabManageUsers);
-            this.dashboardTabControl.Location = new System.Drawing.Point(24, 64);
+            this.dashboardTabControl.Location = new System.Drawing.Point(71, 55);
             this.dashboardTabControl.Name = "dashboardTabControl";
-            this.dashboardTabControl.SelectedIndex = 2;
-            this.dashboardTabControl.Size = new System.Drawing.Size(853, 483);
+            this.dashboardTabControl.SelectedIndex = 0;
+            this.dashboardTabControl.Size = new System.Drawing.Size(829, 483);
             this.dashboardTabControl.TabIndex = 0;
             this.dashboardTabControl.UseSelectable = true;
             // 
@@ -185,7 +193,7 @@ namespace RainCheckUI
             this.tabShowAll.HorizontalScrollbarSize = 10;
             this.tabShowAll.Location = new System.Drawing.Point(4, 38);
             this.tabShowAll.Name = "tabShowAll";
-            this.tabShowAll.Size = new System.Drawing.Size(845, 441);
+            this.tabShowAll.Size = new System.Drawing.Size(821, 441);
             this.tabShowAll.Style = MetroFramework.MetroColorStyle.Black;
             this.tabShowAll.TabIndex = 0;
             this.tabShowAll.Text = "All Forecasts           ";
@@ -249,7 +257,7 @@ namespace RainCheckUI
             this.gridViewAll.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.gridViewAll.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.gridViewAll.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridViewAll.Size = new System.Drawing.Size(846, 443);
+            this.gridViewAll.Size = new System.Drawing.Size(822, 443);
             this.gridViewAll.TabIndex = 2;
             // 
             // forecastIdDataGridViewTextBoxColumn
@@ -344,7 +352,7 @@ namespace RainCheckUI
             this.tabManageForecasts.HorizontalScrollbarSize = 10;
             this.tabManageForecasts.Location = new System.Drawing.Point(4, 38);
             this.tabManageForecasts.Name = "tabManageForecasts";
-            this.tabManageForecasts.Size = new System.Drawing.Size(845, 441);
+            this.tabManageForecasts.Size = new System.Drawing.Size(821, 441);
             this.tabManageForecasts.TabIndex = 1;
             this.tabManageForecasts.Text = "Manage Forecasts       ";
             this.tabManageForecasts.ToolTipText = "Manage forecast data";
@@ -356,7 +364,7 @@ namespace RainCheckUI
             // 
             this.forecastDate.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.forecastBindingSource, "ForecastDate", true));
             this.forecastDate.Location = new System.Drawing.Point(4, 101);
-            this.forecastDate.MinimumSize = new System.Drawing.Size(0, 29);
+            this.forecastDate.MinimumSize = new System.Drawing.Size(4, 29);
             this.forecastDate.Name = "forecastDate";
             this.forecastDate.Size = new System.Drawing.Size(340, 29);
             this.forecastDate.TabIndex = 0;
@@ -773,6 +781,7 @@ namespace RainCheckUI
             // 
             // tabManageLocation
             // 
+            this.tabManageLocation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(247)))), ((int)(((byte)(251)))));
             this.tabManageLocation.Controls.Add(this.lbValidator);
             this.tabManageLocation.Controls.Add(this.gridCityPreview);
             this.tabManageLocation.Controls.Add(this.btnDeleteCity);
@@ -788,7 +797,7 @@ namespace RainCheckUI
             this.tabManageLocation.HorizontalScrollbarSize = 10;
             this.tabManageLocation.Location = new System.Drawing.Point(4, 38);
             this.tabManageLocation.Name = "tabManageLocation";
-            this.tabManageLocation.Size = new System.Drawing.Size(845, 441);
+            this.tabManageLocation.Size = new System.Drawing.Size(821, 441);
             this.tabManageLocation.TabIndex = 2;
             this.tabManageLocation.Text = "Manage Location   ";
             this.tabManageLocation.ToolTipText = "Manage Locations";
@@ -854,8 +863,9 @@ namespace RainCheckUI
             this.gridCityPreview.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.gridCityPreview.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.gridCityPreview.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridCityPreview.Size = new System.Drawing.Size(441, 438);
+            this.gridCityPreview.Size = new System.Drawing.Size(424, 438);
             this.gridCityPreview.TabIndex = 23;
+            this.gridCityPreview.UseCustomBackColor = true;
             // 
             // cityIdDataGridViewTextBoxColumn2
             // 
@@ -893,12 +903,13 @@ namespace RainCheckUI
             this.btnDeleteCity.FlatAppearance.BorderSize = 0;
             this.btnDeleteCity.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightCoral;
             this.btnDeleteCity.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDeleteCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteCity.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.btnDeleteCity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(244)))), ((int)(((byte)(236)))));
             this.btnDeleteCity.Location = new System.Drawing.Point(230, 400);
             this.btnDeleteCity.Name = "btnDeleteCity";
             this.btnDeleteCity.Size = new System.Drawing.Size(114, 38);
             this.btnDeleteCity.TabIndex = 18;
-            this.btnDeleteCity.Text = "Delete";
+            this.btnDeleteCity.Text = "DELETE";
             this.btnDeleteCity.UseVisualStyleBackColor = false;
             this.btnDeleteCity.Click += new System.EventHandler(this.btnDeleteCity_Click);
             // 
@@ -910,29 +921,31 @@ namespace RainCheckUI
             this.btnUpdateCity.FlatAppearance.BorderSize = 0;
             this.btnUpdateCity.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightCoral;
             this.btnUpdateCity.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUpdateCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdateCity.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.btnUpdateCity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(90)))), ((int)(((byte)(118)))));
             this.btnUpdateCity.Location = new System.Drawing.Point(117, 400);
             this.btnUpdateCity.Name = "btnUpdateCity";
             this.btnUpdateCity.Size = new System.Drawing.Size(107, 38);
             this.btnUpdateCity.TabIndex = 19;
-            this.btnUpdateCity.Text = "Update";
+            this.btnUpdateCity.Text = "UPDATE";
             this.btnUpdateCity.UseVisualStyleBackColor = false;
             this.btnUpdateCity.Click += new System.EventHandler(this.btnUpdateCity_Click);
             // 
             // btnAddCity
             // 
-            this.btnAddCity.BackColor = System.Drawing.Color.SpringGreen;
+            this.btnAddCity.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(195)))), ((int)(((byte)(175)))));
             this.btnAddCity.Cursor = System.Windows.Forms.Cursors.No;
             this.btnAddCity.FlatAppearance.BorderColor = System.Drawing.Color.Crimson;
             this.btnAddCity.FlatAppearance.BorderSize = 0;
             this.btnAddCity.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightCoral;
             this.btnAddCity.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddCity.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.btnAddCity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(244)))), ((int)(((byte)(236)))));
             this.btnAddCity.Location = new System.Drawing.Point(3, 400);
             this.btnAddCity.Name = "btnAddCity";
             this.btnAddCity.Size = new System.Drawing.Size(108, 38);
             this.btnAddCity.TabIndex = 20;
-            this.btnAddCity.Text = "Add City";
+            this.btnAddCity.Text = "ADD";
             this.btnAddCity.UseVisualStyleBackColor = false;
             this.btnAddCity.Click += new System.EventHandler(this.btnAddCity_Click);
             // 
@@ -942,7 +955,7 @@ namespace RainCheckUI
             // 
             // 
             this.txtSearchProvince.CustomButton.Image = null;
-            this.txtSearchProvince.CustomButton.Location = new System.Drawing.Point(313, 1);
+            this.txtSearchProvince.CustomButton.Location = new System.Drawing.Point(312, 1);
             this.txtSearchProvince.CustomButton.Name = "";
             this.txtSearchProvince.CustomButton.Size = new System.Drawing.Size(27, 27);
             this.txtSearchProvince.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -961,7 +974,7 @@ namespace RainCheckUI
             this.txtSearchProvince.SelectionLength = 0;
             this.txtSearchProvince.SelectionStart = 0;
             this.txtSearchProvince.ShortcutsEnabled = true;
-            this.txtSearchProvince.Size = new System.Drawing.Size(341, 29);
+            this.txtSearchProvince.Size = new System.Drawing.Size(340, 29);
             this.txtSearchProvince.TabIndex = 17;
             this.txtSearchProvince.UseSelectable = true;
             this.txtSearchProvince.WaterMark = "eg. Eastern Cape";
@@ -1044,7 +1057,7 @@ namespace RainCheckUI
             this.tabManageUsers.HorizontalScrollbarSize = 10;
             this.tabManageUsers.Location = new System.Drawing.Point(4, 38);
             this.tabManageUsers.Name = "tabManageUsers";
-            this.tabManageUsers.Size = new System.Drawing.Size(845, 441);
+            this.tabManageUsers.Size = new System.Drawing.Size(821, 441);
             this.tabManageUsers.TabIndex = 3;
             this.tabManageUsers.Text = "Manage Users";
             this.tabManageUsers.ToolTipText = "Manage registered users";
@@ -1341,6 +1354,22 @@ namespace RainCheckUI
             this.homeTownDataGridViewTextBoxColumn.Name = "homeTownDataGridViewTextBoxColumn";
             this.homeTownDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // btnRefresh
+            // 
+            this.btnRefresh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(185)))), ((int)(((byte)(239)))));
+            this.btnRefresh.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnRefresh.FlatAppearance.BorderSize = 0;
+            this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRefresh.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.btnRefresh.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(244)))), ((int)(((byte)(236)))));
+            this.btnRefresh.Location = new System.Drawing.Point(721, 38);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(159, 33);
+            this.btnRefresh.TabIndex = 1;
+            this.btnRefresh.Text = "REFRESH";
+            this.btnRefresh.UseVisualStyleBackColor = false;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
             // provinceBindingSource
             // 
             this.provinceBindingSource.DataSource = typeof(RainCheckUI.Model.Province);
@@ -1350,20 +1379,6 @@ namespace RainCheckUI
             this.dataGridViewTextBoxColumn1.DataPropertyName = "HomeTown";
             this.dataGridViewTextBoxColumn1.HeaderText = "Home Town";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // btnRefresh
-            // 
-            this.btnRefresh.BackColor = System.Drawing.Color.MediumSpringGreen;
-            this.btnRefresh.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnRefresh.FlatAppearance.BorderSize = 0;
-            this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRefresh.Location = new System.Drawing.Point(281, 22);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(91, 33);
-            this.btnRefresh.TabIndex = 1;
-            this.btnRefresh.Text = "REFRESH";
-            this.btnRefresh.UseVisualStyleBackColor = false;
-            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // dataGridViewTextBoxColumn2
             // 
@@ -1728,20 +1743,99 @@ namespace RainCheckUI
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
             this.dataGridViewTextBoxColumn7.ReadOnly = true;
             // 
+            // iconStrip
+            // 
+            this.iconStrip.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(90)))), ((int)(((byte)(118)))));
+            this.iconStrip.Controls.Add(this.btnDashboard);
+            this.iconStrip.Controls.Add(this.btnToggleMenu);
+            this.iconStrip.Dock = System.Windows.Forms.DockStyle.Left;
+            this.iconStrip.Location = new System.Drawing.Point(0, 0);
+            this.iconStrip.Name = "iconStrip";
+            this.iconStrip.Size = new System.Drawing.Size(49, 561);
+            this.iconStrip.TabIndex = 17;
+            // 
+            // btnDashboard
+            // 
+            this.btnDashboard.BackgroundImage = global::RainCheckUI.Properties.Resources.previous;
+            this.btnDashboard.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnDashboard.FlatAppearance.BorderSize = 0;
+            this.btnDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDashboard.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(247)))), ((int)(((byte)(251)))));
+            this.btnDashboard.Location = new System.Drawing.Point(8, 511);
+            this.btnDashboard.Name = "btnDashboard";
+            this.btnDashboard.Padding = new System.Windows.Forms.Padding(10);
+            this.btnDashboard.Size = new System.Drawing.Size(33, 32);
+            this.btnDashboard.TabIndex = 0;
+            this.btnDashboard.UseVisualStyleBackColor = true;
+            // 
+            // btnToggleMenu
+            // 
+            this.btnToggleMenu.BackgroundImage = global::RainCheckUI.Properties.Resources.cloud;
+            this.btnToggleMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnToggleMenu.FlatAppearance.BorderSize = 0;
+            this.btnToggleMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnToggleMenu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(247)))), ((int)(((byte)(251)))));
+            this.btnToggleMenu.Location = new System.Drawing.Point(8, 3);
+            this.btnToggleMenu.Name = "btnToggleMenu";
+            this.btnToggleMenu.Padding = new System.Windows.Forms.Padding(10);
+            this.btnToggleMenu.Size = new System.Drawing.Size(33, 32);
+            this.btnToggleMenu.TabIndex = 0;
+            this.btnToggleMenu.UseVisualStyleBackColor = true;
+            // 
+            // btnMinimize
+            // 
+            this.btnMinimize.FlatAppearance.BorderSize = 0;
+            this.btnMinimize.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(186)))), ((int)(((byte)(195)))));
+            this.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMinimize.Location = new System.Drawing.Point(811, 0);
+            this.btnMinimize.Name = "btnMinimize";
+            this.btnMinimize.Size = new System.Drawing.Size(45, 32);
+            this.btnMinimize.TabIndex = 18;
+            this.btnMinimize.Text = "➖";
+            this.btnMinimize.UseVisualStyleBackColor = true;
+            this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
+            // 
+            // btnQuit
+            // 
+            this.btnQuit.FlatAppearance.BorderSize = 0;
+            this.btnQuit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(186)))), ((int)(((byte)(195)))));
+            this.btnQuit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnQuit.Location = new System.Drawing.Point(855, 0);
+            this.btnQuit.Name = "btnQuit";
+            this.btnQuit.Size = new System.Drawing.Size(45, 32);
+            this.btnQuit.TabIndex = 19;
+            this.btnQuit.Text = "✖";
+            this.btnQuit.UseVisualStyleBackColor = true;
+            this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(247)))), ((int)(((byte)(251)))));
+            this.panel1.Location = new System.Drawing.Point(-16, 36);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(960, 2);
+            this.panel1.TabIndex = 20;
+            // 
             // FormDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::RainCheckUI.Properties.Resources.BLURandrew_ruiz_1287537_unsplash;
+            this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle;
-            this.ClientSize = new System.Drawing.Size(900, 600);
+            this.ClientSize = new System.Drawing.Size(900, 561);
+            this.Controls.Add(this.iconStrip);
             this.Controls.Add(this.btnRefresh);
+            this.Controls.Add(this.btnMinimize);
+            this.Controls.Add(this.btnQuit);
             this.Controls.Add(this.dashboardTabControl);
+            this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(900, 600);
             this.Name = "FormDashboard";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dashboard";
+            this.Load += new System.EventHandler(this.FormDashboard_Load_1);
             this.dashboardTabControl.ResumeLayout(false);
             this.tabShowAll.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridViewAll)).EndInit();
@@ -1762,6 +1856,7 @@ namespace RainCheckUI
             this.panelAddForecast.ResumeLayout(false);
             this.panelAddForecast.PerformLayout();
             this.metroContextMenu1.ResumeLayout(false);
+            this.iconStrip.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1843,10 +1938,6 @@ namespace RainCheckUI
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private MetroFramework.Controls.MetroLabel lbValidator;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cityIdDataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cityNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn provinceIdDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn provinceDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button btnDeleteForecast;
         private System.Windows.Forms.Button btnUpdateForecast;
         private System.Windows.Forms.Button btnNewForecast;
@@ -1873,6 +1964,16 @@ namespace RainCheckUI
         private MetroFramework.Controls.MetroTextBox txtMaxTemp;
         private MetroFramework.Controls.MetroLabel metroLabel19;
         private MetroFramework.Controls.MetroLabel metroLabel4;
+        private System.Windows.Forms.Panel iconStrip;
+        private System.Windows.Forms.Button btnDashboard;
+        private System.Windows.Forms.Button btnToggleMenu;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cityIdDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cityNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn provinceIdDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn provinceDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button btnMinimize;
+        private System.Windows.Forms.Button btnQuit;
+        private System.Windows.Forms.Panel panel1;
     }
 }
 

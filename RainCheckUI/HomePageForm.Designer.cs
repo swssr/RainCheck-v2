@@ -40,24 +40,28 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.iconStrip = new System.Windows.Forms.Panel();
+            this.btnDashboard = new System.Windows.Forms.Button();
             this.btnToggleMenu = new System.Windows.Forms.Button();
-            this.lbTemp = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.homeTemp = new System.Windows.Forms.Label();
+            this.lbHomeTown = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.homeWeatherIcon = new System.Windows.Forms.PictureBox();
             this.isFarenheit = new System.Windows.Forms.Label();
             this.isCelcius = new System.Windows.Forms.Label();
             this.lbSummary = new System.Windows.Forms.Label();
-            this.lbVisibility = new System.Windows.Forms.Label();
-            this.lbHumidity = new System.Windows.Forms.Label();
-            this.lbWindSpeed = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lbPrecip = new System.Windows.Forms.Label();
-            this.metroTextBox1 = new MetroFramework.Controls.MetroTextBox();
+            this.homeVisibility = new System.Windows.Forms.Label();
+            this.homeHumidity = new System.Windows.Forms.Label();
+            this.homeWindSpeed = new System.Windows.Forms.Label();
+            this.homeLastUpdated = new System.Windows.Forms.Label();
+            this.homePrecip = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtGlobalSearch = new MetroFramework.Controls.MetroTextBox();
             this.iconMore = new System.Windows.Forms.PictureBox();
+            this.lbcurrTime = new System.Windows.Forms.Label();
             this.cardList.SuspendLayout();
             this.iconStrip.SuspendLayout();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.homeWeatherIcon)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconMore)).BeginInit();
             this.SuspendLayout();
@@ -99,6 +103,7 @@
             // 
             // timer
             // 
+            this.timer.Enabled = true;
             this.timer.Tick += new System.EventHandler(this.timer_Tick);
             // 
             // cardList
@@ -157,13 +162,29 @@
             // 
             // iconStrip
             // 
-            this.iconStrip.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(108)))), ((int)(((byte)(254)))));
+            this.iconStrip.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(90)))), ((int)(((byte)(118)))));
+            this.iconStrip.Controls.Add(this.btnDashboard);
             this.iconStrip.Controls.Add(this.btnToggleMenu);
             this.iconStrip.Dock = System.Windows.Forms.DockStyle.Left;
             this.iconStrip.Location = new System.Drawing.Point(0, 0);
             this.iconStrip.Name = "iconStrip";
             this.iconStrip.Size = new System.Drawing.Size(49, 600);
             this.iconStrip.TabIndex = 16;
+            // 
+            // btnDashboard
+            // 
+            this.btnDashboard.BackgroundImage = global::RainCheckUI.Properties.Resources.settings;
+            this.btnDashboard.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnDashboard.FlatAppearance.BorderSize = 0;
+            this.btnDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDashboard.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(247)))), ((int)(((byte)(251)))));
+            this.btnDashboard.Location = new System.Drawing.Point(8, 536);
+            this.btnDashboard.Name = "btnDashboard";
+            this.btnDashboard.Padding = new System.Windows.Forms.Padding(10);
+            this.btnDashboard.Size = new System.Drawing.Size(33, 32);
+            this.btnDashboard.TabIndex = 0;
+            this.btnDashboard.UseVisualStyleBackColor = true;
+            this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
             // 
             // btnToggleMenu
             // 
@@ -178,47 +199,57 @@
             this.btnToggleMenu.Size = new System.Drawing.Size(33, 32);
             this.btnToggleMenu.TabIndex = 0;
             this.btnToggleMenu.UseVisualStyleBackColor = true;
-            this.btnToggleMenu.Click += new System.EventHandler(this.btnToggleMenu_Click);
             // 
-            // lbTemp
+            // homeTemp
             // 
-            this.lbTemp.AutoSize = true;
-            this.lbTemp.Font = new System.Drawing.Font("Segoe UI Black", 64F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.lbTemp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(35)))), ((int)(((byte)(56)))));
-            this.lbTemp.Location = new System.Drawing.Point(322, 34);
-            this.lbTemp.Name = "lbTemp";
-            this.lbTemp.Size = new System.Drawing.Size(106, 86);
-            this.lbTemp.TabIndex = 1;
-            this.lbTemp.Text = "18";
+            this.homeTemp.AutoSize = true;
+            this.homeTemp.Font = new System.Drawing.Font("Segoe UI Black", 64F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.homeTemp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(35)))), ((int)(((byte)(56)))));
+            this.homeTemp.Location = new System.Drawing.Point(322, 34);
+            this.homeTemp.Name = "homeTemp";
+            this.homeTemp.Size = new System.Drawing.Size(106, 86);
+            this.homeTemp.TabIndex = 1;
+            this.homeTemp.Text = "18";
             // 
-            // label4
+            // lbHomeTown
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI Semilight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(35)))), ((int)(((byte)(56)))));
-            this.label4.Location = new System.Drawing.Point(320, 22);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(111, 25);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Durban, KZN";
+            this.lbHomeTown.AutoSize = true;
+            this.lbHomeTown.Font = new System.Drawing.Font("Segoe UI Semilight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.lbHomeTown.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(35)))), ((int)(((byte)(56)))));
+            this.lbHomeTown.Location = new System.Drawing.Point(320, 22);
+            this.lbHomeTown.Name = "lbHomeTown";
+            this.lbHomeTown.Size = new System.Drawing.Size(111, 25);
+            this.lbHomeTown.TabIndex = 1;
+            this.lbHomeTown.Text = "Durban, KZN";
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.White;
+            this.panel4.Controls.Add(this.homeWeatherIcon);
             this.panel4.Controls.Add(this.isFarenheit);
             this.panel4.Controls.Add(this.isCelcius);
             this.panel4.Controls.Add(this.lbSummary);
-            this.panel4.Controls.Add(this.label4);
-            this.panel4.Controls.Add(this.lbTemp);
-            this.panel4.Controls.Add(this.lbVisibility);
-            this.panel4.Controls.Add(this.lbHumidity);
-            this.panel4.Controls.Add(this.lbWindSpeed);
-            this.panel4.Controls.Add(this.label1);
-            this.panel4.Controls.Add(this.lbPrecip);
-            this.panel4.Location = new System.Drawing.Point(79, 74);
+            this.panel4.Controls.Add(this.lbHomeTown);
+            this.panel4.Controls.Add(this.homeTemp);
+            this.panel4.Controls.Add(this.homeVisibility);
+            this.panel4.Controls.Add(this.homeHumidity);
+            this.panel4.Controls.Add(this.homeWindSpeed);
+            this.panel4.Controls.Add(this.homeLastUpdated);
+            this.panel4.Controls.Add(this.homePrecip);
+            this.panel4.Location = new System.Drawing.Point(79, 75);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(785, 251);
+            this.panel4.Size = new System.Drawing.Size(785, 250);
             this.panel4.TabIndex = 11;
+            // 
+            // homeWeatherIcon
+            // 
+            this.homeWeatherIcon.Image = global::RainCheckUI.Properties.Resources.zcloud;
+            this.homeWeatherIcon.Location = new System.Drawing.Point(226, 45);
+            this.homeWeatherIcon.Name = "homeWeatherIcon";
+            this.homeWeatherIcon.Size = new System.Drawing.Size(100, 87);
+            this.homeWeatherIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.homeWeatherIcon.TabIndex = 2;
+            this.homeWeatherIcon.TabStop = false;
             // 
             // isFarenheit
             // 
@@ -253,110 +284,121 @@
             this.lbSummary.TabIndex = 1;
             this.lbSummary.Text = "Sunny";
             // 
-            // lbVisibility
+            // homeVisibility
             // 
-            this.lbVisibility.AutoSize = true;
-            this.lbVisibility.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.lbVisibility.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(35)))), ((int)(((byte)(56)))));
-            this.lbVisibility.Location = new System.Drawing.Point(422, 165);
-            this.lbVisibility.Name = "lbVisibility";
-            this.lbVisibility.Size = new System.Drawing.Size(83, 15);
-            this.lbVisibility.TabIndex = 1;
-            this.lbVisibility.Text = "Visibilty 16 km";
+            this.homeVisibility.AutoSize = true;
+            this.homeVisibility.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.homeVisibility.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(35)))), ((int)(((byte)(56)))));
+            this.homeVisibility.Location = new System.Drawing.Point(422, 165);
+            this.homeVisibility.Name = "homeVisibility";
+            this.homeVisibility.Size = new System.Drawing.Size(83, 15);
+            this.homeVisibility.TabIndex = 1;
+            this.homeVisibility.Text = "Visibilty 16 km";
             // 
-            // lbHumidity
+            // homeHumidity
             // 
-            this.lbHumidity.AutoSize = true;
-            this.lbHumidity.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.lbHumidity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(35)))), ((int)(((byte)(56)))));
-            this.lbHumidity.Location = new System.Drawing.Point(337, 186);
-            this.lbHumidity.Name = "lbHumidity";
-            this.lbHumidity.Size = new System.Drawing.Size(82, 15);
-            this.lbHumidity.TabIndex = 1;
-            this.lbHumidity.Text = "Humidity 14%";
+            this.homeHumidity.AutoSize = true;
+            this.homeHumidity.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.homeHumidity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(35)))), ((int)(((byte)(56)))));
+            this.homeHumidity.Location = new System.Drawing.Point(337, 186);
+            this.homeHumidity.Name = "homeHumidity";
+            this.homeHumidity.Size = new System.Drawing.Size(82, 15);
+            this.homeHumidity.TabIndex = 1;
+            this.homeHumidity.Text = "Humidity 14%";
             // 
-            // lbWindSpeed
+            // homeWindSpeed
             // 
-            this.lbWindSpeed.AutoSize = true;
-            this.lbWindSpeed.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.lbWindSpeed.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(35)))), ((int)(((byte)(56)))));
-            this.lbWindSpeed.Location = new System.Drawing.Point(250, 165);
-            this.lbWindSpeed.Name = "lbWindSpeed";
-            this.lbWindSpeed.Size = new System.Drawing.Size(82, 15);
-            this.lbWindSpeed.TabIndex = 1;
-            this.lbWindSpeed.Text = "Wind 14 km/h";
+            this.homeWindSpeed.AutoSize = true;
+            this.homeWindSpeed.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.homeWindSpeed.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(35)))), ((int)(((byte)(56)))));
+            this.homeWindSpeed.Location = new System.Drawing.Point(250, 165);
+            this.homeWindSpeed.Name = "homeWindSpeed";
+            this.homeWindSpeed.Size = new System.Drawing.Size(82, 15);
+            this.homeWindSpeed.TabIndex = 1;
+            this.homeWindSpeed.Text = "Wind 14 km/h";
             // 
-            // label1
+            // homeLastUpdated
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(35)))), ((int)(((byte)(56)))));
-            this.label1.Location = new System.Drawing.Point(318, 140);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(138, 15);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Llast updated 6/05/2019";
+            this.homeLastUpdated.AutoSize = true;
+            this.homeLastUpdated.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.homeLastUpdated.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(35)))), ((int)(((byte)(56)))));
+            this.homeLastUpdated.Location = new System.Drawing.Point(318, 140);
+            this.homeLastUpdated.Name = "homeLastUpdated";
+            this.homeLastUpdated.Size = new System.Drawing.Size(135, 15);
+            this.homeLastUpdated.TabIndex = 1;
+            this.homeLastUpdated.Text = "Last updated 6/05/2019";
             // 
-            // lbPrecip
+            // homePrecip
             // 
-            this.lbPrecip.AutoSize = true;
-            this.lbPrecip.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.lbPrecip.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(35)))), ((int)(((byte)(56)))));
-            this.lbPrecip.Location = new System.Drawing.Point(347, 165);
-            this.lbPrecip.Name = "lbPrecip";
-            this.lbPrecip.Size = new System.Drawing.Size(59, 15);
-            this.lbPrecip.TabIndex = 1;
-            this.lbPrecip.Text = "Precip 0%";
-            // 
-            // metroTextBox1
-            // 
-            // 
-            // 
-            // 
-            this.metroTextBox1.CustomButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(247)))), ((int)(((byte)(251)))));
-            this.metroTextBox1.CustomButton.Image = null;
-            this.metroTextBox1.CustomButton.Location = new System.Drawing.Point(164, 1);
-            this.metroTextBox1.CustomButton.Name = "";
-            this.metroTextBox1.CustomButton.Size = new System.Drawing.Size(27, 27);
-            this.metroTextBox1.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroTextBox1.CustomButton.TabIndex = 1;
-            this.metroTextBox1.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroTextBox1.CustomButton.UseSelectable = true;
-            this.metroTextBox1.CustomButton.Visible = false;
-            this.metroTextBox1.Lines = new string[0];
-            this.metroTextBox1.Location = new System.Drawing.Point(672, 37);
-            this.metroTextBox1.MaxLength = 32767;
-            this.metroTextBox1.Name = "metroTextBox1";
-            this.metroTextBox1.PasswordChar = '\0';
-            this.metroTextBox1.PromptText = "Search";
-            this.metroTextBox1.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.metroTextBox1.SelectedText = "";
-            this.metroTextBox1.SelectionLength = 0;
-            this.metroTextBox1.SelectionStart = 0;
-            this.metroTextBox1.ShortcutsEnabled = true;
-            this.metroTextBox1.Size = new System.Drawing.Size(192, 29);
-            this.metroTextBox1.TabIndex = 17;
-            this.metroTextBox1.UseSelectable = true;
-            this.metroTextBox1.WaterMark = "Search";
-            this.metroTextBox1.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroTextBox1.WaterMarkFont = new System.Drawing.Font("Segoe UI Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.homePrecip.AutoSize = true;
+            this.homePrecip.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.homePrecip.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(35)))), ((int)(((byte)(56)))));
+            this.homePrecip.Location = new System.Drawing.Point(347, 165);
+            this.homePrecip.Name = "homePrecip";
+            this.homePrecip.Size = new System.Drawing.Size(59, 15);
+            this.homePrecip.TabIndex = 1;
+            this.homePrecip.Text = "Precip 0%";
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.txtGlobalSearch);
             this.panel1.Controls.Add(this.iconMore);
+            this.panel1.Controls.Add(this.lbcurrTime);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(900, 600);
             this.panel1.TabIndex = 18;
             // 
+            // txtGlobalSearch
+            // 
+            // 
+            // 
+            // 
+            this.txtGlobalSearch.CustomButton.Image = null;
+            this.txtGlobalSearch.CustomButton.Location = new System.Drawing.Point(210, 2);
+            this.txtGlobalSearch.CustomButton.Name = "";
+            this.txtGlobalSearch.CustomButton.Size = new System.Drawing.Size(29, 29);
+            this.txtGlobalSearch.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtGlobalSearch.CustomButton.TabIndex = 1;
+            this.txtGlobalSearch.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtGlobalSearch.CustomButton.UseSelectable = true;
+            this.txtGlobalSearch.CustomButton.Visible = false;
+            this.txtGlobalSearch.Lines = new string[0];
+            this.txtGlobalSearch.Location = new System.Drawing.Point(623, 38);
+            this.txtGlobalSearch.MaxLength = 32767;
+            this.txtGlobalSearch.Name = "txtGlobalSearch";
+            this.txtGlobalSearch.PasswordChar = '\0';
+            this.txtGlobalSearch.PromptText = "Search";
+            this.txtGlobalSearch.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtGlobalSearch.SelectedText = "";
+            this.txtGlobalSearch.SelectionLength = 0;
+            this.txtGlobalSearch.SelectionStart = 0;
+            this.txtGlobalSearch.ShortcutsEnabled = true;
+            this.txtGlobalSearch.Size = new System.Drawing.Size(242, 34);
+            this.txtGlobalSearch.TabIndex = 17;
+            this.txtGlobalSearch.UseSelectable = true;
+            this.txtGlobalSearch.WaterMark = "Search";
+            this.txtGlobalSearch.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtGlobalSearch.WaterMarkFont = new System.Drawing.Font("Segoe UI Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            // 
             // iconMore
             // 
-            this.iconMore.Location = new System.Drawing.Point(595, 44);
+            this.iconMore.Location = new System.Drawing.Point(549, 48);
             this.iconMore.Name = "iconMore";
             this.iconMore.Size = new System.Drawing.Size(68, 13);
             this.iconMore.TabIndex = 0;
             this.iconMore.TabStop = false;
+            // 
+            // lbcurrTime
+            // 
+            this.lbcurrTime.AutoSize = true;
+            this.lbcurrTime.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.lbcurrTime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(35)))), ((int)(((byte)(56)))));
+            this.lbcurrTime.Location = new System.Drawing.Point(76, 48);
+            this.lbcurrTime.Name = "lbcurrTime";
+            this.lbcurrTime.Size = new System.Drawing.Size(0, 15);
+            this.lbcurrTime.TabIndex = 1;
             // 
             // HomePageForm
             // 
@@ -364,7 +406,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(247)))), ((int)(((byte)(251)))));
             this.ClientSize = new System.Drawing.Size(900, 600);
-            this.Controls.Add(this.metroTextBox1);
+            this.Controls.Add(this.panel4);
             this.Controls.Add(this.iconStrip);
             this.Controls.Add(this.btnMinimize);
             this.Controls.Add(this.btnQuit);
@@ -372,7 +414,6 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.panel4);
             this.Controls.Add(this.cardList);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -387,7 +428,9 @@
             this.iconStrip.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.homeWeatherIcon)).EndInit();
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconMore)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -406,19 +449,22 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnToggleMenu;
         private System.Windows.Forms.Panel iconStrip;
-        private System.Windows.Forms.Label lbTemp;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label homeTemp;
+        private System.Windows.Forms.Label lbHomeTown;
         private System.Windows.Forms.Panel panel4;
-        private MetroFramework.Controls.MetroTextBox metroTextBox1;
         private System.Windows.Forms.Label isFarenheit;
         private System.Windows.Forms.Label lbSummary;
-        private System.Windows.Forms.Label lbVisibility;
-        private System.Windows.Forms.Label lbHumidity;
-        private System.Windows.Forms.Label lbWindSpeed;
-        private System.Windows.Forms.Label lbPrecip;
+        private System.Windows.Forms.Label homeVisibility;
+        private System.Windows.Forms.Label homeHumidity;
+        private System.Windows.Forms.Label homeWindSpeed;
+        private System.Windows.Forms.Label homePrecip;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label homeLastUpdated;
         private System.Windows.Forms.Label isCelcius;
         private System.Windows.Forms.PictureBox iconMore;
+        private System.Windows.Forms.PictureBox homeWeatherIcon;
+        private MetroFramework.Controls.MetroTextBox txtGlobalSearch;
+        private System.Windows.Forms.Label lbcurrTime;
+        private System.Windows.Forms.Button btnDashboard;
     }
 }

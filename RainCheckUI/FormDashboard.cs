@@ -2,11 +2,12 @@
 using RainCheckUI.Model;
 using RainCheckUI.Services;
 using System;
+using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 namespace RainCheckUI
 {
-    public partial class FormDashboard : MetroFramework.Forms.MetroForm
+    public partial class FormDashboard : Form
     {
         //Application context init.
         ModelContext _context = new ModelContext();
@@ -336,5 +337,25 @@ namespace RainCheckUI
             }
             MessageBox.Show(output);
         }
+
+        private void FormDashboard_Load_1(object sender, EventArgs e)
+        {
+            //dashboardTabControl.Appearance =  Color.FromArgb(45, 81, 118);
+
+        }
+
+        private void btnMinimize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void btnQuit_Click(object sender, EventArgs e)
+        {
+            if (MetroMessageBox.Show(this, "Are you sure you want to quit application?", "Exit Application", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                this.Dispose();
+            }
+        }
+
     }
 }

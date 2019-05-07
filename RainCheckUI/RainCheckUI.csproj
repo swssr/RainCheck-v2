@@ -77,6 +77,7 @@
     </Compile>
     <Compile Include="Helpers\BaseHelper.cs" />
     <Compile Include="Helpers\LocationsHelper.cs" />
+    <Compile Include="Helpers\StringHelper.cs" />
     <Compile Include="HomePageForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -170,6 +171,36 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\andre-benz-1199458-unsplash.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sunny.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zcloud.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rain.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\019-cloud.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\041-summer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\029-sunrise.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\001-rain.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\house.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\previous.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

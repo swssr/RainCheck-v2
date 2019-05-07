@@ -8,5 +8,6 @@ namespace RainCheckUI
 {
     public abstract class FormBase
     {
+
     }
 }
