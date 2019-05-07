@@ -258,7 +258,6 @@ namespace RainCheckUI
             string output = "";
 
             Forecast forecastBound = forecastBindingSource.Current as Forecast;
-
             //Minimum req to pass check: City or Date should differ
 
             Func<Forecast, bool> isDuplicate = (obj) =>
@@ -357,5 +356,15 @@ namespace RainCheckUI
             }
         }
 
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            this.Dispose();
+
+            using (var home = new HomePageForm())
+            {
+                home.ShowDialog();
+            }
+        }
     }
 }
